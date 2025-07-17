@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "echange_experts",
+  "info": {
+    "singularName": "echange-expert",
+    "pluralName": "echange-experts",
+    "displayName": "echange-expert"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
