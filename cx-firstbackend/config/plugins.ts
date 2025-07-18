@@ -1,6 +1,11 @@
+interface UploadConfig {
+  provider: string;
+  providerOptions?: object;
+}
+
 module.exports = ({ env }) => {
   const provider = env('UPLOAD_PROVIDER', 'local');
-  const config = { provider };
+  const config: UploadConfig = { provider };
 
   // N'ajoute providerOptions QUE si provider !== 'local'
   if (provider !== 'local') {
