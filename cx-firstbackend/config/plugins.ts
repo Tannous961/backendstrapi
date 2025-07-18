@@ -1,12 +1,11 @@
 module.exports = ({ env }) => {
   const provider = env('UPLOAD_PROVIDER', 'local');
-  const config = {
-    provider,
-  };
+  const config = { provider };
 
+  // N'ajoute providerOptions QUE si provider !== 'local'
   if (provider !== 'local') {
     config.providerOptions = {
-      // ...options cloud, mais laisse vide en local
+      // Ne rien mettre ici en local !
     };
   }
 
