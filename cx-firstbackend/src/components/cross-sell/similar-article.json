@@ -10,6 +10,10 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::article.article"
+    },
+    "script": {
+      "type": "richtext",
+      "private": true
     }
   },
   "config": {}

@@ -483,6 +483,12 @@ export interface ApiAboutAbout extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    test: Schema.Attribute.Component<'cross-sell.similar-article', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

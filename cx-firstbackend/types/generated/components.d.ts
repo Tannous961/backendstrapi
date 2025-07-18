@@ -43,6 +43,7 @@ export interface CrossSellSimilarArticle extends Struct.ComponentSchema {
       'oneToOne',
       'api::article.article'
     >;
+    script: Schema.Attribute.RichText & Schema.Attribute.Private;
   };
 }
 

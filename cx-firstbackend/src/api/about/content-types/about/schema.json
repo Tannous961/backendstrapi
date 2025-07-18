@@ -86,6 +86,16 @@
       },
       "component": "shared.seo",
       "repeatable": true
+    },
+    "test": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "cross-sell.similar-article",
+      "repeatable": true
     }
   }
 }
