@@ -6,7 +6,7 @@ export default [
     name: 'strapi::cors',
     config: {
       enabled: true,
-      origin: ['http://localhost:5173'],
+      origin: ['http://localhost:5173', 'https://cx-first.onrender.com'],
     },
   },
   'strapi::poweredBy',
