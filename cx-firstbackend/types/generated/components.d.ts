@@ -8,7 +8,10 @@ export interface ComponentdesignLeftzone1 extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
     title: Schema.Attribute.String;
   };
 }
@@ -21,8 +24,25 @@ export interface ComponentdesignRightzone1 extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface CrossSellSimilarArticle extends Struct.ComponentSchema {
+  collectionName: 'components_cross_sell_similar_articles';
+  info: {
+    displayName: 'similar-article';
+    icon: 'arrowDown';
+  };
+  attributes: {
+    crossSellArticle: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::article.article'
+    >;
   };
 }
 
@@ -81,9 +101,7 @@ export interface SharedSlider extends Struct.ComponentSchema {
     displayName: 'Slider';
     icon: 'address-book';
   };
-  attributes: {
-    files: Schema.Attribute.Media<'images', true>;
-  };
+  attributes: {};
 }
 
 declare module '@strapi/strapi' {
@@ -91,6 +109,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'componentdesign.leftzone1': ComponentdesignLeftzone1;
       'componentdesign.rightzone1': ComponentdesignRightzone1;
+      'cross-sell.similar-article': CrossSellSimilarArticle;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_cross_sell_similar_articles",
+  "info": {
+    "displayName": "similar-article",
+    "icon": "arrowDown"
+  },
+  "options": {},
+  "attributes": {
+    "crossSellArticle": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::article.article"
+    }
+  },
+  "config": {}
+}
