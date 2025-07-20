@@ -59,3 +59,19 @@ Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/
 ---
 
 <sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+
+## Exemple d'appel API Strapi pour peupler plusieurs champs imbriqués
+
+Utilisez cette URL pour récupérer tous les champs médias et composants imbriqués :
+
+```
+http://localhost:1338/api/abouts?locale=fr&populate=%7B%22bannerImage%22%3Atrue%2C%22leftzonetop%22%3A%7B%22populate%22%3A%5B%22image%22%5D%7D%2C%22rightzonecenter%22%3A%7B%22populate%22%3A%5B%22image%22%5D%7D%2C%22leftzonebottom%22%3A%7B%22populate%22%3A%5B%22image%22%5D%7D%7D
+```
+
+Cela permet de peupler en une seule requête :
+- bannerImage
+- leftzonetop (avec image)
+- rightzonecenter (avec image)
+- leftzonebottom (avec image)
+
+N'utilisez pas plusieurs fois `&populate=...` dans l'URL, préférez cette syntaxe JSON encodée pour Strapi v4/v5.
