@@ -410,7 +410,7 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiAboutAbout extends Struct.SingleTypeSchema {
+export interface ApiAboutAbout extends Struct.CollectionTypeSchema {
   collectionName: 'abouts';
   info: {
     description: 'Write about yourself and the content you create';
