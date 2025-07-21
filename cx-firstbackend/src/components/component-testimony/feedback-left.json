@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_component_testimony_feedback_lefts",
+  "info": {
+    "displayName": "feedbackLeft",
+    "icon": "message"
+  },
+  "options": {},
+  "attributes": {
+    "feedback": {
+      "type": "text"
+    },
+    "name": {
+      "type": "string"
+    },
+    "post": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

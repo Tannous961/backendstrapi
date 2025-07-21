@@ -1,5 +1,190 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface ComponentCxfirstQualimetrieDescription
+  extends Struct.ComponentSchema {
+  collectionName: 'components_component_cxfirst_qualimetrie_descriptions';
+  info: {
+    displayName: 'description';
+    icon: 'apps';
+  };
+  attributes: {};
+}
+
+export interface ComponentCxfirstQualimetrieInfoCxfirst
+  extends Struct.ComponentSchema {
+  collectionName: 'components_component_cxfirst_qualimetrie_info_cxfirsts';
+  info: {
+    displayName: 'infoCxfirst';
+    icon: 'plus';
+  };
+  attributes: {};
+}
+
+export interface ComponentCxfirstQualimetrieInfoQualimetrie
+  extends Struct.ComponentSchema {
+  collectionName: 'components_component_cxfirst_qualimetrie_info_qualimetries';
+  info: {
+    displayName: 'infoQualimetrie';
+    icon: 'plus';
+  };
+  attributes: {};
+}
+
+export interface ComponentKpiCxInfoCxfirst extends Struct.ComponentSchema {
+  collectionName: 'components_component_kpi_cx_info_cxfirsts';
+  info: {
+    displayName: 'infoCxfirst';
+    icon: 'chartCircle';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ComponentKpiCxKpiClient extends Struct.ComponentSchema {
+  collectionName: 'components_component_kpi_cx_kpi_clients';
+  info: {
+    displayName: 'kpiClient';
+    icon: 'plus';
+  };
+  attributes: {};
+}
+
+export interface ComponentKpiCxKpiSite extends Struct.ComponentSchema {
+  collectionName: 'components_component_kpi_cx_kpi_sites';
+  info: {
+    displayName: 'kpiSite';
+    icon: 'plus';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ComponentKpiCxKpiUser extends Struct.ComponentSchema {
+  collectionName: 'components_component_kpi_cx_kpi_users';
+  info: {
+    displayName: 'kpiUser';
+    icon: 'plus';
+  };
+  attributes: {};
+}
+
+export interface ComponentMapInfoMap extends Struct.ComponentSchema {
+  collectionName: 'components_component_map_info_maps';
+  info: {
+    displayName: 'infoMap';
+    icon: 'bulletList';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ComponentSolutionConnect extends Struct.ComponentSchema {
+  collectionName: 'components_component_solution_connects';
+  info: {
+    displayName: 'connect';
+    icon: 'plus';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ComponentSolutionDeploy extends Struct.ComponentSchema {
+  collectionName: 'components_component_solution_deploys';
+  info: {
+    displayName: 'deploy';
+    icon: 'plus';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ComponentSolutionExplore extends Struct.ComponentSchema {
+  collectionName: 'components_component_solution_explores';
+  info: {
+    displayName: 'explore';
+    icon: 'plus';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ComponentSolutionInfos extends Struct.ComponentSchema {
+  collectionName: 'components_component_solution_infos';
+  info: {
+    displayName: 'infos';
+    icon: 'arrowUp';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ComponentTestimonyFeedbackCenter
+  extends Struct.ComponentSchema {
+  collectionName: 'components_component_testimony_feedback_centers';
+  info: {
+    displayName: 'feedbackCenter';
+    icon: 'message';
+  };
+  attributes: {
+    feedback: Schema.Attribute.Text;
+    name: Schema.Attribute.String;
+    post: Schema.Attribute.String;
+  };
+}
+
+export interface ComponentTestimonyFeedbackLeft extends Struct.ComponentSchema {
+  collectionName: 'components_component_testimony_feedback_lefts';
+  info: {
+    displayName: 'feedbackLeft';
+    icon: 'message';
+  };
+  attributes: {
+    feedback: Schema.Attribute.Text;
+    name: Schema.Attribute.String;
+    post: Schema.Attribute.String;
+  };
+}
+
+export interface ComponentTestimonyFeedbackRight
+  extends Struct.ComponentSchema {
+  collectionName: 'components_component_testimony_feedback_rights';
+  info: {
+    displayName: 'feedbackRight';
+    icon: 'message';
+  };
+  attributes: {
+    feedback: Schema.Attribute.Text;
+    name: Schema.Attribute.String;
+    post: Schema.Attribute.String;
+  };
+}
+
+export interface ComponentTestimonyInfos extends Struct.ComponentSchema {
+  collectionName: 'components_component_testimony_infos';
+  info: {
+    displayName: 'infos';
+    icon: 'plus';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface ComponentdesignLeftzone1 extends Struct.ComponentSchema {
   collectionName: 'components_componentdesign_leftzone1s';
   info: {
@@ -121,6 +306,22 @@ export interface VideoVideoZone extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'component-cxfirst-qualimetrie.description': ComponentCxfirstQualimetrieDescription;
+      'component-cxfirst-qualimetrie.info-cxfirst': ComponentCxfirstQualimetrieInfoCxfirst;
+      'component-cxfirst-qualimetrie.info-qualimetrie': ComponentCxfirstQualimetrieInfoQualimetrie;
+      'component-kpi-cx.info-cxfirst': ComponentKpiCxInfoCxfirst;
+      'component-kpi-cx.kpi-client': ComponentKpiCxKpiClient;
+      'component-kpi-cx.kpi-site': ComponentKpiCxKpiSite;
+      'component-kpi-cx.kpi-user': ComponentKpiCxKpiUser;
+      'component-map.info-map': ComponentMapInfoMap;
+      'component-solution.connect': ComponentSolutionConnect;
+      'component-solution.deploy': ComponentSolutionDeploy;
+      'component-solution.explore': ComponentSolutionExplore;
+      'component-solution.infos': ComponentSolutionInfos;
+      'component-testimony.feedback-center': ComponentTestimonyFeedbackCenter;
+      'component-testimony.feedback-left': ComponentTestimonyFeedbackLeft;
+      'component-testimony.feedback-right': ComponentTestimonyFeedbackRight;
+      'component-testimony.infos': ComponentTestimonyInfos;
       'componentdesign.leftzone1': ComponentdesignLeftzone1;
       'componentdesign.rightzone1': ComponentdesignRightzone1;
       'cross-sell.similar-article': CrossSellSimilarArticle;

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_component_kpi_cx_kpi_sites",
+  "info": {
+    "displayName": "kpiSite",
+    "icon": "plus"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

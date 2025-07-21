@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_component_solution_infos",
+  "info": {
+    "displayName": "infos",
+    "icon": "arrowUp"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_component_kpi_cx_info_cxfirsts",
+  "info": {
+    "displayName": "infoCxfirst",
+    "icon": "chartCircle"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

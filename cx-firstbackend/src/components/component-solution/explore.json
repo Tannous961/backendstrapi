@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_component_solution_explores",
+  "info": {
+    "displayName": "explore",
+    "icon": "plus"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

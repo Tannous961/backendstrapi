@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_component_testimony_infos",
+  "info": {
+    "displayName": "infos",
+    "icon": "plus"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}
