@@ -662,10 +662,10 @@ export interface ApiEchangeExpertEchangeExpert
   };
 }
 
-export interface ApiFooterFooter extends Struct.CollectionTypeSchema {
+export interface ApiFooterFooter extends Struct.SingleTypeSchema {
   collectionName: 'footers';
   info: {
-    displayName: 'Footer';
+    displayName: 'footer';
     pluralName: 'footers';
     singularName: 'footer';
   };
