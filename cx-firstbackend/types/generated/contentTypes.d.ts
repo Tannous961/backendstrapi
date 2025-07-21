@@ -410,7 +410,7 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiAboutAbout extends Struct.CollectionTypeSchema {
+export interface ApiAboutAbout extends Struct.SingleTypeSchema {
   collectionName: 'abouts';
   info: {
     description: 'Write about yourself and the content you create';
@@ -479,12 +479,6 @@ export interface ApiAboutAbout extends Struct.CollectionTypeSchema {
         };
       }>;
     seo: Schema.Attribute.Component<'shared.seo', true> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    test: Schema.Attribute.Component<'cross-sell.similar-article', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -746,6 +740,37 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     siteDescription: Schema.Attribute.Text & Schema.Attribute.Required;
     siteName: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiVideoZoneVideoZone extends Struct.CollectionTypeSchema {
+  collectionName: 'video_zones';
+  info: {
+    displayName: 'video-zone';
+    pluralName: 'video-zones';
+    singularName: 'video-zone';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::video-zone.video-zone'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1269,6 +1294,7 @@ declare module '@strapi/strapi' {
       'api::echange-expert.echange-expert': ApiEchangeExpertEchangeExpert;
       'api::footer.footer': ApiFooterFooter;
       'api::global.global': ApiGlobalGlobal;
+      'api::video-zone.video-zone': ApiVideoZoneVideoZone;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

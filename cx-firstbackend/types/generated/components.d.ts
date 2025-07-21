@@ -105,6 +105,19 @@ export interface SharedSlider extends Struct.ComponentSchema {
   attributes: {};
 }
 
+export interface VideoVideoZone extends Struct.ComponentSchema {
+  collectionName: 'components_video_video_zones';
+  info: {
+    displayName: 'video-zone';
+    icon: 'play';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+    video: Schema.Attribute.Media<'images' | 'files', true>;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -116,6 +129,7 @@ declare module '@strapi/strapi' {
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'video.video-zone': VideoVideoZone;
     }
   }
 }
