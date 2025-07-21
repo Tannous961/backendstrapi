@@ -14,5 +14,46 @@
       "localized": true
     }
   },
-  "attributes": {}
+  "attributes": {
+    "infos": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "component-testimony.infos",
+      "repeatable": true
+    },
+    "feedbackLeft": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "component-testimony.feedback-left",
+      "repeatable": false
+    },
+    "feedbackCenter": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "component-testimony.feedback-center",
+      "repeatable": false
+    },
+    "feedbackRight": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "component-testimony.feedback-right",
+      "repeatable": false
+    }
+  }
 }
