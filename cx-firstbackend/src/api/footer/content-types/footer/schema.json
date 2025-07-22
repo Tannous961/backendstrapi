@@ -15,8 +15,24 @@
     }
   },
   "attributes": {
+    "newsletterTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
     "Newsletter": {
       "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "productTitle": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -31,8 +47,24 @@
         }
       }
     },
+    "legalTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
     "Legal": {
       "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "socialTitle": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
