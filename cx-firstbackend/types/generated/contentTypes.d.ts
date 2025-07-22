@@ -451,33 +451,9 @@ export interface ApiAboutAbout extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    leftzonebottom: Schema.Attribute.Component<
-      'componentdesign.leftzone1',
-      true
-    > &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    leftzonetop: Schema.Attribute.Component<'componentdesign.leftzone1', true> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::about.about'>;
     publishedAt: Schema.Attribute.DateTime;
-    rightzonecenter: Schema.Attribute.Component<
-      'componentdesign.rightzone1',
-      true
-    > &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     seo: Schema.Attribute.Component<'shared.seo', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -618,8 +594,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiEchangeExpertEchangeExpert
-  extends Struct.CollectionTypeSchema {
+export interface ApiEchangeExpertEchangeExpert extends Struct.SingleTypeSchema {
   collectionName: 'echange_experts';
   info: {
     displayName: 'echange-expert';
@@ -891,37 +866,6 @@ export interface ApiUsecaseUsecase extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::usecase.usecase'
-    >;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiVideoZoneVideoZone extends Struct.CollectionTypeSchema {
-  collectionName: 'video_zones';
-  info: {
-    displayName: 'video-zone';
-    pluralName: 'video-zones';
-    singularName: 'video-zone';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::video-zone.video-zone'
     >;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
@@ -1451,7 +1395,6 @@ declare module '@strapi/strapi' {
       'api::ressource.ressource': ApiRessourceRessource;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
       'api::usecase.usecase': ApiUsecaseUsecase;
-      'api::video-zone.video-zone': ApiVideoZoneVideoZone;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

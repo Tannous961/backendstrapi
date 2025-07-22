@@ -14,6 +14,9 @@
     "script": {
       "type": "richtext",
       "private": true
+    },
+    "title": {
+      "type": "string"
     }
   },
   "config": {}

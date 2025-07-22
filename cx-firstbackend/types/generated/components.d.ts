@@ -84,6 +84,26 @@ export interface ComponentMapInfoMap extends Struct.ComponentSchema {
   };
 }
 
+export interface ComponentQualimetrieInformation
+  extends Struct.ComponentSchema {
+  collectionName: 'components_component_qualimetrie_information';
+  info: {
+    displayName: 'information';
+    icon: 'apps';
+  };
+  attributes: {
+    cxfirst: Schema.Attribute.Text;
+    description: Schema.Attribute.Text;
+    imageCxfirst: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    imageQualimetrie: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    qualimetrie: Schema.Attribute.Text;
+  };
+}
+
 export interface ComponentSolutionConnect extends Struct.ComponentSchema {
   collectionName: 'components_component_solution_connects';
   info: {
@@ -185,35 +205,32 @@ export interface ComponentTestimonyInfos extends Struct.ComponentSchema {
   };
 }
 
-export interface ComponentdesignLeftzone1 extends Struct.ComponentSchema {
-  collectionName: 'components_componentdesign_leftzone1s';
+export interface ComponentTopbannerBanner extends Struct.ComponentSchema {
+  collectionName: 'components_component_topbanner_banners';
   info: {
-    displayName: 'leftzone1';
-    icon: 'apps';
+    displayName: 'banner';
+    icon: 'picture';
   };
   attributes: {
-    description: Schema.Attribute.Text;
-    image: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
+    backgroundimage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
     >;
+    description: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
 }
 
-export interface ComponentdesignRightzone1 extends Struct.ComponentSchema {
-  collectionName: 'components_componentdesign_rightzone1s';
+export interface ComponentVideoVideoZone extends Struct.ComponentSchema {
+  collectionName: 'components_component_video_video_zones';
   info: {
-    displayName: 'rightzone1';
-    icon: 'apps';
+    displayName: 'video-zone';
+    icon: 'picture';
   };
   attributes: {
     description: Schema.Attribute.Text;
-    image: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
+    imageVideo: Schema.Attribute.Media<'images' | 'files'>;
     title: Schema.Attribute.String;
+    video: Schema.Attribute.Media<'files' | 'videos'>;
   };
 }
 
@@ -229,6 +246,7 @@ export interface CrossSellSimilarArticle extends Struct.ComponentSchema {
       'api::article.article'
     >;
     script: Schema.Attribute.RichText & Schema.Attribute.Private;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -314,6 +332,7 @@ declare module '@strapi/strapi' {
       'component-kpi-cx.kpi-site': ComponentKpiCxKpiSite;
       'component-kpi-cx.kpi-user': ComponentKpiCxKpiUser;
       'component-map.info-map': ComponentMapInfoMap;
+      'component-qualimetrie.information': ComponentQualimetrieInformation;
       'component-solution.connect': ComponentSolutionConnect;
       'component-solution.deploy': ComponentSolutionDeploy;
       'component-solution.explore': ComponentSolutionExplore;
@@ -322,8 +341,8 @@ declare module '@strapi/strapi' {
       'component-testimony.feedback-left': ComponentTestimonyFeedbackLeft;
       'component-testimony.feedback-right': ComponentTestimonyFeedbackRight;
       'component-testimony.infos': ComponentTestimonyInfos;
-      'componentdesign.leftzone1': ComponentdesignLeftzone1;
-      'componentdesign.rightzone1': ComponentdesignRightzone1;
+      'component-topbanner.banner': ComponentTopbannerBanner;
+      'component-video.video-zone': ComponentVideoVideoZone;
       'cross-sell.similar-article': CrossSellSimilarArticle;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;

@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_component_qualimetrie_information",
+  "info": {
+    "displayName": "information",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "qualimetrie": {
+      "type": "text"
+    },
+    "cxfirst": {
+      "type": "text"
+    },
+    "imageQualimetrie": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "imageCxfirst": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

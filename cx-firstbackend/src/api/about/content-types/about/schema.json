@@ -47,36 +47,6 @@
         "audios"
       ]
     },
-    "leftzonetop": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "componentdesign.leftzone1",
-      "repeatable": true
-    },
-    "rightzonecenter": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "componentdesign.rightzone1",
-      "repeatable": true
-    },
-    "leftzonebottom": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "componentdesign.leftzone1",
-      "repeatable": true
-    },
     "seo": {
       "type": "component",
       "pluginOptions": {

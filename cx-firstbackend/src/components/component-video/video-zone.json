@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_component_video_video_zones",
+  "info": {
+    "displayName": "video-zone",
+    "icon": "picture"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "imageVideo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "files",
+        "videos"
+      ]
+    }
+  },
+  "config": {}
+}
