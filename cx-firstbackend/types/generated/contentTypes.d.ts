@@ -746,6 +746,37 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiHomePageHomePage extends Struct.CollectionTypeSchema {
+  collectionName: 'home_pages';
+  info: {
+    displayName: 'homePage';
+    pluralName: 'home-pages';
+    singularName: 'home-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::home-page.home-page'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiRessourceRessource extends Struct.CollectionTypeSchema {
   collectionName: 'ressources';
   info: {
@@ -1416,6 +1447,7 @@ declare module '@strapi/strapi' {
       'api::echange-expert.echange-expert': ApiEchangeExpertEchangeExpert;
       'api::footer.footer': ApiFooterFooter;
       'api::global.global': ApiGlobalGlobal;
+      'api::home-page.home-page': ApiHomePageHomePage;
       'api::ressource.ressource': ApiRessourceRessource;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
       'api::usecase.usecase': ApiUsecaseUsecase;
