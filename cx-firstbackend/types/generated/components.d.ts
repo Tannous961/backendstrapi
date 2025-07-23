@@ -7,27 +7,25 @@ export interface ComponentCxfirstQualimetrieDescription
     displayName: 'description';
     icon: 'apps';
   };
-  attributes: {};
+  attributes: {
+    cxfirst: Schema.Attribute.Component<'component-cxfisrt.description', true>;
+    description: Schema.Attribute.Text;
+    qualimetrie: Schema.Attribute.Component<
+      'component-qualimetrie.qualimetrie',
+      true
+    >;
+  };
 }
 
-export interface ComponentCxfirstQualimetrieInfoCxfirst
-  extends Struct.ComponentSchema {
-  collectionName: 'components_component_cxfirst_qualimetrie_info_cxfirsts';
+export interface ComponentCxfisrtDescription extends Struct.ComponentSchema {
+  collectionName: 'components_component_cxfisrt_descriptions';
   info: {
-    displayName: 'infoCxfirst';
-    icon: 'plus';
+    displayName: 'description';
+    icon: 'bulletList';
   };
-  attributes: {};
-}
-
-export interface ComponentCxfirstQualimetrieInfoQualimetrie
-  extends Struct.ComponentSchema {
-  collectionName: 'components_component_cxfirst_qualimetrie_info_qualimetries';
-  info: {
-    displayName: 'infoQualimetrie';
-    icon: 'plus';
+  attributes: {
+    description: Schema.Attribute.Text;
   };
-  attributes: {};
 }
 
 export interface ComponentKpiCxInfoCxfirst extends Struct.ComponentSchema {
@@ -37,6 +35,9 @@ export interface ComponentKpiCxInfoCxfirst extends Struct.ComponentSchema {
     icon: 'chartCircle';
   };
   attributes: {
+    dataClient: Schema.Attribute.Component<'component-kpi-cx.kpi-client', true>;
+    dataSite: Schema.Attribute.Component<'component-kpi-cx.kpi-site', true>;
+    dataUser: Schema.Attribute.Component<'component-kpi-cx.kpi-user', true>;
     description: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
@@ -48,7 +49,10 @@ export interface ComponentKpiCxKpiClient extends Struct.ComponentSchema {
     displayName: 'kpiClient';
     icon: 'plus';
   };
-  attributes: {};
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
 }
 
 export interface ComponentKpiCxKpiSite extends Struct.ComponentSchema {
@@ -69,7 +73,10 @@ export interface ComponentKpiCxKpiUser extends Struct.ComponentSchema {
     displayName: 'kpiUser';
     icon: 'plus';
   };
-  attributes: {};
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
 }
 
 export interface ComponentMapInfoMap extends Struct.ComponentSchema {
@@ -82,6 +89,16 @@ export interface ComponentMapInfoMap extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
+}
+
+export interface ComponentQualimetrieDescription
+  extends Struct.ComponentSchema {
+  collectionName: 'components_component_qualimetrie_descriptions';
+  info: {
+    displayName: 'description';
+    icon: 'bulletList';
+  };
+  attributes: {};
 }
 
 export interface ComponentQualimetrieInformation
@@ -101,6 +118,18 @@ export interface ComponentQualimetrieInformation
       'images' | 'files' | 'videos' | 'audios'
     >;
     qualimetrie: Schema.Attribute.Text;
+  };
+}
+
+export interface ComponentQualimetrieQualimetrie
+  extends Struct.ComponentSchema {
+  collectionName: 'components_component_qualimetrie_qualimetries';
+  info: {
+    displayName: 'qualimetrie';
+    icon: 'bulletList';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
   };
 }
 
@@ -147,7 +176,10 @@ export interface ComponentSolutionInfos extends Struct.ComponentSchema {
     icon: 'arrowUp';
   };
   attributes: {
+    connect: Schema.Attribute.Component<'component-solution.connect', true>;
+    deploy: Schema.Attribute.Component<'component-solution.deploy', true>;
     description: Schema.Attribute.Text;
+    explore: Schema.Attribute.Component<'component-solution.explore', true>;
     title: Schema.Attribute.String;
   };
 }
@@ -203,7 +235,19 @@ export interface ComponentTestimonyInfos extends Struct.ComponentSchema {
     icon: 'plus';
   };
   attributes: {
+    centerFeedback: Schema.Attribute.Component<
+      'component-testimony.feedback-center',
+      true
+    >;
     description: Schema.Attribute.Text;
+    leftFeedback: Schema.Attribute.Component<
+      'component-testimony.feedback-left',
+      true
+    >;
+    rightFeedback: Schema.Attribute.Component<
+      'component-testimony.feedback-right',
+      true
+    >;
     title: Schema.Attribute.String;
   };
 }
@@ -328,14 +372,15 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'component-cxfirst-qualimetrie.description': ComponentCxfirstQualimetrieDescription;
-      'component-cxfirst-qualimetrie.info-cxfirst': ComponentCxfirstQualimetrieInfoCxfirst;
-      'component-cxfirst-qualimetrie.info-qualimetrie': ComponentCxfirstQualimetrieInfoQualimetrie;
+      'component-cxfisrt.description': ComponentCxfisrtDescription;
       'component-kpi-cx.info-cxfirst': ComponentKpiCxInfoCxfirst;
       'component-kpi-cx.kpi-client': ComponentKpiCxKpiClient;
       'component-kpi-cx.kpi-site': ComponentKpiCxKpiSite;
       'component-kpi-cx.kpi-user': ComponentKpiCxKpiUser;
       'component-map.info-map': ComponentMapInfoMap;
+      'component-qualimetrie.description': ComponentQualimetrieDescription;
       'component-qualimetrie.information': ComponentQualimetrieInformation;
+      'component-qualimetrie.qualimetrie': ComponentQualimetrieQualimetrie;
       'component-solution.connect': ComponentSolutionConnect;
       'component-solution.deploy': ComponentSolutionDeploy;
       'component-solution.explore': ComponentSolutionExplore;

@@ -770,21 +770,45 @@ export interface ApiHomePageHomePage extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::home-page.home-page'
-    >;
-    publishedAt: Schema.Attribute.DateTime;
-    solutionConnect: Schema.Attribute.Component<
-      'component-solution.connect',
-      false
+    cxKpi: Schema.Attribute.Component<'component-kpi-cx.info-cxfirst', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    descriptionQualiCxfirst: Schema.Attribute.Component<
+      'component-cxfirst-qualimetrie.description',
+      true
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
+    infosTestimony: Schema.Attribute.Component<
+      'component-testimony.infos',
+      true
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    lastArticle: Schema.Attribute.Component<
+      'cross-sell.similar-article',
+      true
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::home-page.home-page'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
     solutionInfos: Schema.Attribute.Component<
       'component-solution.infos',
       false
@@ -797,6 +821,12 @@ export interface ApiHomePageHomePage extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    video: Schema.Attribute.Component<'component-video.video-zone', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
   };
 }
 

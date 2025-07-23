@@ -11,6 +11,21 @@
     },
     "description": {
       "type": "text"
+    },
+    "dataSite": {
+      "type": "component",
+      "component": "component-kpi-cx.kpi-site",
+      "repeatable": true
+    },
+    "dataUser": {
+      "type": "component",
+      "component": "component-kpi-cx.kpi-user",
+      "repeatable": true
+    },
+    "dataClient": {
+      "type": "component",
+      "component": "component-kpi-cx.kpi-client",
+      "repeatable": true
     }
   },
   "config": {}

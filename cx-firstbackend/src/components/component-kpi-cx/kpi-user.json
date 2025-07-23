@@ -5,6 +5,13 @@
     "icon": "plus"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "title": {
+      "type": "string"
+    }
+  },
   "config": {}
 }

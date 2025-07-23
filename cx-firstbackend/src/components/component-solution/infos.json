@@ -11,6 +11,21 @@
     },
     "description": {
       "type": "text"
+    },
+    "connect": {
+      "type": "component",
+      "component": "component-solution.connect",
+      "repeatable": true
+    },
+    "explore": {
+      "type": "component",
+      "component": "component-solution.explore",
+      "repeatable": true
+    },
+    "deploy": {
+      "type": "component",
+      "component": "component-solution.deploy",
+      "repeatable": true
     }
   },
   "config": {}

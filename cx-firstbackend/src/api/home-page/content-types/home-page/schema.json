@@ -35,15 +35,55 @@
       "component": "component-solution.infos",
       "repeatable": false
     },
-    "solutionConnect": {
+    "video": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "component-solution.connect",
+      "component": "component-video.video-zone",
       "repeatable": false
+    },
+    "descriptionQualiCxfirst": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "component-cxfirst-qualimetrie.description",
+      "repeatable": true
+    },
+    "lastArticle": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "cross-sell.similar-article",
+      "repeatable": true
+    },
+    "cxKpi": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "component-kpi-cx.info-cxfirst",
+      "repeatable": true
+    },
+    "infosTestimony": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "component-testimony.infos",
+      "repeatable": true
     }
   }
 }

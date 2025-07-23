@@ -5,6 +5,20 @@
     "icon": "apps"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "cxfirst": {
+      "type": "component",
+      "component": "component-cxfisrt.description",
+      "repeatable": true
+    },
+    "qualimetrie": {
+      "type": "component",
+      "component": "component-qualimetrie.qualimetrie",
+      "repeatable": true
+    }
+  },
   "config": {}
 }
