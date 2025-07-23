@@ -745,7 +745,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   };
 }
 
-export interface ApiHomePageHomePage extends Struct.CollectionTypeSchema {
+export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
   collectionName: 'home_pages';
   info: {
     displayName: 'homePage';
