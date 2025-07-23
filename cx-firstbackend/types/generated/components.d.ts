@@ -161,6 +161,7 @@ export interface ComponentTestimonyFeedbackCenter
   };
   attributes: {
     feedback: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files'>;
     name: Schema.Attribute.String;
     post: Schema.Attribute.String;
   };
@@ -174,6 +175,7 @@ export interface ComponentTestimonyFeedbackLeft extends Struct.ComponentSchema {
   };
   attributes: {
     feedback: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files'>;
     name: Schema.Attribute.String;
     post: Schema.Attribute.String;
   };
@@ -188,6 +190,7 @@ export interface ComponentTestimonyFeedbackRight
   };
   attributes: {
     feedback: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files'>;
     name: Schema.Attribute.String;
     post: Schema.Attribute.String;
   };

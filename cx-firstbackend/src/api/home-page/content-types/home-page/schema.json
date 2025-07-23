@@ -14,5 +14,36 @@
       "localized": true
     }
   },
-  "attributes": {}
+  "attributes": {
+    "banner": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "component-topbanner.banner",
+      "repeatable": false
+    },
+    "solutionInfos": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "component-solution.infos",
+      "repeatable": false
+    },
+    "solutionConnect": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "component-solution.connect",
+      "repeatable": false
+    }
+  }
 }
