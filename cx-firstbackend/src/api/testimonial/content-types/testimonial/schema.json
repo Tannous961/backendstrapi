@@ -15,45 +15,40 @@
     }
   },
   "attributes": {
-    "infos": {
+    "banner": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "component-testimony.infos",
-      "repeatable": true
-    },
-    "feedbackLeft": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "component-testimony.feedback-left",
+      "component": "component-banner.banner-top",
       "repeatable": false
     },
-    "feedbackCenter": {
-      "type": "component",
+    "title": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "component": "component-testimony.feedback-center",
-      "repeatable": false
+      }
     },
-    "feedbackRight": {
-      "type": "component",
+    "slug": {
+      "type": "uid",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "component-testimony.feedback-right",
-      "repeatable": false
+      "targetField": "title"
+    },
+    "description": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

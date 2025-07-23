@@ -1,5 +1,29 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface ComponentBannerBannerTop extends Struct.ComponentSchema {
+  collectionName: 'components_component_banner_banner_tops';
+  info: {
+    displayName: 'bannerTop';
+    icon: 'dashboard';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    script: Schema.Attribute.RichText;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ComponentBlogBlog extends Struct.ComponentSchema {
+  collectionName: 'components_component_blog_blogs';
+  info: {
+    displayName: 'blog';
+    icon: 'apps';
+  };
+  attributes: {
+    banner: Schema.Attribute.Component<'component-banner.banner-top', true>;
+  };
+}
+
 export interface ComponentCxfirstQualimetrieDescription
   extends Struct.ComponentSchema {
   collectionName: 'components_component_cxfirst_qualimetrie_descriptions';
@@ -79,14 +103,27 @@ export interface ComponentKpiCxKpiUser extends Struct.ComponentSchema {
   };
 }
 
-export interface ComponentMapInfoMap extends Struct.ComponentSchema {
-  collectionName: 'components_component_map_info_maps';
+export interface ComponentLefttextLeftzone extends Struct.ComponentSchema {
+  collectionName: 'components_component_lefttext_leftzones';
   info: {
-    displayName: 'infoMap';
+    displayName: 'leftzone';
     icon: 'bulletList';
   };
   attributes: {
     description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ComponentMapCarte extends Struct.ComponentSchema {
+  collectionName: 'components_component_map_cartes';
+  info: {
+    displayName: 'carte';
+    icon: 'dashboard';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    script: Schema.Attribute.RichText;
     title: Schema.Attribute.String;
   };
 }
@@ -130,6 +167,31 @@ export interface ComponentQualimetrieQualimetrie
   };
   attributes: {
     description: Schema.Attribute.Text;
+  };
+}
+
+export interface ComponentRighttextRightZone extends Struct.ComponentSchema {
+  collectionName: 'components_component_righttext_right_zones';
+  info: {
+    displayName: 'rightZone';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ComponentSolutionConnectInfos extends Struct.ComponentSchema {
+  collectionName: 'components_component_solution_connect_infos';
+  info: {
+    displayName: 'infos';
+    icon: 'apps';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -235,17 +297,9 @@ export interface ComponentTestimonyInfos extends Struct.ComponentSchema {
     icon: 'plus';
   };
   attributes: {
-    centerFeedback: Schema.Attribute.Component<
-      'component-testimony.feedback-center',
-      true
-    >;
     description: Schema.Attribute.Text;
     leftFeedback: Schema.Attribute.Component<
       'component-testimony.feedback-left',
-      true
-    >;
-    rightFeedback: Schema.Attribute.Component<
-      'component-testimony.feedback-right',
       true
     >;
     title: Schema.Attribute.String;
@@ -371,16 +425,21 @@ export interface VideoVideoZone extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'component-banner.banner-top': ComponentBannerBannerTop;
+      'component-blog.blog': ComponentBlogBlog;
       'component-cxfirst-qualimetrie.description': ComponentCxfirstQualimetrieDescription;
       'component-cxfisrt.description': ComponentCxfisrtDescription;
       'component-kpi-cx.info-cxfirst': ComponentKpiCxInfoCxfirst;
       'component-kpi-cx.kpi-client': ComponentKpiCxKpiClient;
       'component-kpi-cx.kpi-site': ComponentKpiCxKpiSite;
       'component-kpi-cx.kpi-user': ComponentKpiCxKpiUser;
-      'component-map.info-map': ComponentMapInfoMap;
+      'component-lefttext.leftzone': ComponentLefttextLeftzone;
+      'component-map.carte': ComponentMapCarte;
       'component-qualimetrie.description': ComponentQualimetrieDescription;
       'component-qualimetrie.information': ComponentQualimetrieInformation;
       'component-qualimetrie.qualimetrie': ComponentQualimetrieQualimetrie;
+      'component-righttext.right-zone': ComponentRighttextRightZone;
+      'component-solution-connect.infos': ComponentSolutionConnectInfos;
       'component-solution.connect': ComponentSolutionConnect;
       'component-solution.deploy': ComponentSolutionDeploy;
       'component-solution.explore': ComponentSolutionExplore;

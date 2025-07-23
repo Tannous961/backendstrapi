@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_component_map_info_maps",
+  "collectionName": "components_component_lefttext_leftzones",
   "info": {
-    "displayName": "infoMap",
+    "displayName": "leftzone",
     "icon": "bulletList"
   },
   "options": {},

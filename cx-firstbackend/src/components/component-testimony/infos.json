@@ -16,16 +16,6 @@
       "type": "component",
       "component": "component-testimony.feedback-left",
       "repeatable": true
-    },
-    "centerFeedback": {
-      "type": "component",
-      "component": "component-testimony.feedback-center",
-      "repeatable": true
-    },
-    "rightFeedback": {
-      "type": "component",
-      "component": "component-testimony.feedback-right",
-      "repeatable": true
     }
   },
   "config": {}

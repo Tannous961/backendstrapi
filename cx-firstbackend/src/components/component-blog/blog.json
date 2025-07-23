@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_component_blog_blogs",
+  "info": {
+    "displayName": "blog",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "banner": {
+      "type": "component",
+      "component": "component-banner.banner-top",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

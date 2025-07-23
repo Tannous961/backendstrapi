@@ -1,10 +1,10 @@
 {
-  "kind": "collectionType",
+  "kind": "singleType",
   "collectionName": "abouts",
   "info": {
     "singularName": "about",
     "pluralName": "abouts",
-    "displayName": "about",
+    "displayName": "About",
     "description": "Write about yourself and the content you create"
   },
   "options": {
@@ -16,36 +16,45 @@
     }
   },
   "attributes": {
-    "bannerTitle": {
-      "type": "string",
+    "banner": {
+      "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
-        }
-      }
-    },
-    "bannerDescription": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "bannerImage": {
-      "type": "media",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
         }
       },
-      "multiple": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "component": "component-banner.banner-top",
+      "repeatable": true
+    },
+    "leftSection1": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "component-lefttext.leftzone",
+      "repeatable": true
+    },
+    "rightSection": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "component-righttext.right-zone",
+      "repeatable": true
+    },
+    "leftSection2": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "component-lefttext.leftzone",
+      "repeatable": true
     },
     "seo": {
       "type": "component",
@@ -56,6 +65,41 @@
       },
       "component": "shared.seo",
       "repeatable": true
+    },
+    "infoCarte": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "component-map.carte",
+      "repeatable": false
+    },
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "slug": {
+      "type": "uid",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "targetField": "title"
+    },
+    "description": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
