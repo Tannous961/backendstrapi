@@ -9,42 +9,91 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "banner": {
       "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "component": "component-banner.banner-top",
       "repeatable": false
     },
     "infosConnect": {
       "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "component": "component-solution-connect.infos",
       "repeatable": false
     },
     "characteristicConnect": {
       "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "component": "component-solution-connect.infos",
       "repeatable": true
     },
     "infoExplore": {
       "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "component": "component-solution-connect.infos",
       "repeatable": false
     },
     "characteristicExplore": {
       "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "component": "component-solution-connect.infos",
       "repeatable": true
     },
     "infosDeploy": {
       "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "component": "component-solution-connect.infos",
       "repeatable": false
     },
     "characteristicDeploy": {
       "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "component": "component-solution-connect.infos",
       "repeatable": true
+    },
+    "seoSolution": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.seo",
+      "repeatable": false
     }
   }
 }

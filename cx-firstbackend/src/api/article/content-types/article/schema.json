@@ -4,7 +4,7 @@
   "info": {
     "singularName": "article",
     "pluralName": "articles",
-    "displayName": "Article",
+    "displayName": "articles",
     "description": "Create your blog content"
   },
   "options": {
@@ -16,26 +16,18 @@
     }
   },
   "attributes": {
-    "title": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "description": {
-      "type": "text",
+    "banner": {
+      "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "maxLength": 80
+      "component": "component-topbanner.banner",
+      "repeatable": false
     },
     "slug": {
-      "type": "uid",
-      "targetField": "title"
+      "type": "uid"
     },
     "coverHorizontal": {
       "type": "media",
@@ -67,17 +59,10 @@
         "audios"
       ]
     },
-    "author": {
+    "authors": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::author.author",
-      "inversedBy": "articles"
-    },
-    "category": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::category.category",
-      "inversedBy": "articles"
+      "relation": "oneToMany",
+      "target": "api::author.author"
     },
     "longtext": {
       "type": "richtext",

@@ -20,7 +20,15 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "preventIndexing": {
+      "type": "boolean"
+    },
+    "keywords": {
+      "type": "string"
     }
   }
 }

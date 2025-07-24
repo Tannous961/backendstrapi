@@ -1,11 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "globals",
+  "collectionName": "ressource_lists",
   "info": {
-    "singularName": "global",
-    "pluralName": "globals",
-    "displayName": "Global",
-    "description": "Define global settings"
+    "singularName": "ressource-list",
+    "pluralName": "ressource-lists",
+    "displayName": "ressourceList"
   },
   "options": {
     "draftAndPublish": true
@@ -16,40 +15,37 @@
     }
   },
   "attributes": {
-    "siteName": {
+    "title": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "required": true
+      }
     },
-    "favicon": {
-      "type": "media",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ]
-    },
-    "siteDescription": {
+    "description": {
       "type": "text",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "required": true
+      }
     },
-    "defaultSeo": {
+    "slug": {
+      "type": "uid",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "targetField": "title"
+    },
+    "ressources": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ressource.ressource"
+    },
+    "seoRessource": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
