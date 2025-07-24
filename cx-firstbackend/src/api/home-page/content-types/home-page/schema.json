@@ -45,16 +45,6 @@
       "component": "component-video.video-zone",
       "repeatable": false
     },
-    "descriptionQualiCxfirst": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "component-cxfirst-qualimetrie.description",
-      "repeatable": true
-    },
     "lastArticle": {
       "type": "component",
       "pluginOptions": {
@@ -93,15 +83,6 @@
         }
       }
     },
-    "slug": {
-      "type": "uid",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "targetField": "title"
-    },
     "description": {
       "type": "text",
       "pluginOptions": {
@@ -109,6 +90,16 @@
           "localized": true
         }
       }
+    },
+    "informationCXQuali": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "component-qualimetrie.information",
+      "repeatable": false
     }
   }
 }

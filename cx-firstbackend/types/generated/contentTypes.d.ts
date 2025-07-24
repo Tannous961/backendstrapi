@@ -824,9 +824,9 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    descriptionQualiCxfirst: Schema.Attribute.Component<
-      'component-cxfirst-qualimetrie.description',
-      true
+    informationCXQuali: Schema.Attribute.Component<
+      'component-qualimetrie.information',
+      false
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -857,12 +857,6 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
       'api::home-page.home-page'
     >;
     publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.UID<'title'> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     solutionInfos: Schema.Attribute.Component<
       'component-solution.infos',
       false

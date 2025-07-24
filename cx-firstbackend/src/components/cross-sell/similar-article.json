@@ -11,10 +11,6 @@
       "relation": "oneToOne",
       "target": "api::article.article"
     },
-    "script": {
-      "type": "richtext",
-      "private": true
-    },
     "title": {
       "type": "string"
     }
