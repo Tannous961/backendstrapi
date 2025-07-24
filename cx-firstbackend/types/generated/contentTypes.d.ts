@@ -927,14 +927,30 @@ export interface ApiSolutionSolution extends Struct.SingleTypeSchema {
   };
   attributes: {
     banner: Schema.Attribute.Component<'component-banner.banner-top', false>;
-    characteristic: Schema.Attribute.Component<
+    characteristicConnect: Schema.Attribute.Component<
+      'component-solution-connect.infos',
+      true
+    >;
+    characteristicDeploy: Schema.Attribute.Component<
+      'component-solution-connect.infos',
+      true
+    >;
+    characteristicExplore: Schema.Attribute.Component<
       'component-solution-connect.infos',
       true
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    infos: Schema.Attribute.Component<
+    infoExplore: Schema.Attribute.Component<
+      'component-solution-connect.infos',
+      false
+    >;
+    infosConnect: Schema.Attribute.Component<
+      'component-solution-connect.infos',
+      false
+    >;
+    infosDeploy: Schema.Attribute.Component<
       'component-solution-connect.infos',
       false
     >;

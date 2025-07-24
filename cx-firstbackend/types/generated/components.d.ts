@@ -377,6 +377,9 @@ export interface VideoVideoZone extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
+    imageVideo: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     title: Schema.Attribute.String;
     video: Schema.Attribute.Media<'images' | 'files', true>;
   };
