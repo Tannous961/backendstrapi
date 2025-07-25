@@ -6,10 +6,10 @@
   },
   "options": {},
   "attributes": {
-    "testimonial": {
+    "article": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::testimonial.testimonial"
+      "target": "api::article.article"
     },
     "title": {
       "type": "string"

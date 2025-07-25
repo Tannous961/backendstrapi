@@ -108,6 +108,7 @@ export interface ComponentLefttextLeftzone extends Struct.ComponentSchema {
   attributes: {
     description: Schema.Attribute.Text;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    tag1: Schema.Attribute.Component<'component-tag.tag', false>;
     title: Schema.Attribute.String;
   };
 }
@@ -153,6 +154,7 @@ export interface ComponentRighttextRightZone extends Struct.ComponentSchema {
   attributes: {
     description: Schema.Attribute.Text;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    tag2: Schema.Attribute.Component<'component-tag.tag', false>;
     title: Schema.Attribute.String;
   };
 }
@@ -218,6 +220,16 @@ export interface ComponentSolutionInfos extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     explore: Schema.Attribute.Component<'component-solution.explore', true>;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface ComponentTagTag extends Struct.ComponentSchema {
+  collectionName: 'components_component_tag_tags';
+  info: {
+    displayName: 'tag';
+  };
+  attributes: {
+    tag: Schema.Attribute.Enumeration<['Economie', 'Customer']>;
   };
 }
 
@@ -326,10 +338,7 @@ export interface CrossSellSimilarArticle extends Struct.ComponentSchema {
     icon: 'arrowDown';
   };
   attributes: {
-    testimonial: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::testimonial.testimonial'
-    >;
+    article: Schema.Attribute.Relation<'oneToOne', 'api::article.article'>;
     title: Schema.Attribute.String;
   };
 }
@@ -440,6 +449,7 @@ declare module '@strapi/strapi' {
       'component-solution.deploy': ComponentSolutionDeploy;
       'component-solution.explore': ComponentSolutionExplore;
       'component-solution.infos': ComponentSolutionInfos;
+      'component-tag.tag': ComponentTagTag;
       'component-testimony.feedback-center': ComponentTestimonyFeedbackCenter;
       'component-testimony.feedback-left': ComponentTestimonyFeedbackLeft;
       'component-testimony.feedback-right': ComponentTestimonyFeedbackRight;

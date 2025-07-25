@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_component_tag_tags",
+  "info": {
+    "displayName": "tag"
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "enumeration",
+      "enum": [
+        "Economie",
+        "Customer"
+      ]
+    }
+  },
+  "config": {}
+}

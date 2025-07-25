@@ -25,25 +25,8 @@
       "component": "component-banner.banner-top",
       "repeatable": false
     },
-    "title": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "slug": {
       "type": "uid",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "targetField": "title"
-    },
-    "description": {
-      "type": "text",
       "pluginOptions": {
         "i18n": {
           "localized": true

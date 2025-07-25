@@ -20,6 +20,11 @@
         "videos",
         "audios"
       ]
+    },
+    "tag2": {
+      "type": "component",
+      "component": "component-tag.tag",
+      "repeatable": false
     }
   },
   "config": {}
