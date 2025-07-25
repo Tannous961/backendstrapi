@@ -4,7 +4,7 @@
   "info": {
     "singularName": "about",
     "pluralName": "abouts",
-    "displayName": "About",
+    "displayName": "about",
     "description": "Write about yourself and the content you create"
   },
   "options": {
@@ -100,16 +100,6 @@
           "localized": true
         }
       }
-    },
-    "seoAbout": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "shared.seo",
-      "repeatable": false
     }
   }
 }

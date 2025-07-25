@@ -21,6 +21,14 @@
         "videos",
         "audios"
       ]
+    },
+    "horizontalimage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
     }
   },
   "config": {}

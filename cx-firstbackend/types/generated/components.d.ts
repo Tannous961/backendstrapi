@@ -86,6 +86,7 @@ export interface ComponentLefttextLeftzone extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
   };
 }
@@ -278,6 +279,7 @@ export interface ComponentTopbannerBanner extends Struct.ComponentSchema {
       'images' | 'files' | 'videos' | 'audios'
     >;
     description: Schema.Attribute.Text;
+    horizontalimage: Schema.Attribute.Media<'images' | 'files'>;
     title: Schema.Attribute.String;
   };
 }
@@ -303,9 +305,9 @@ export interface CrossSellSimilarArticle extends Struct.ComponentSchema {
     icon: 'arrowDown';
   };
   attributes: {
-    crossSellArticle: Schema.Attribute.Relation<
+    testimonial: Schema.Attribute.Relation<
       'oneToOne',
-      'api::article.article'
+      'api::testimonial.testimonial'
     >;
     title: Schema.Attribute.String;
   };
@@ -371,6 +373,17 @@ export interface SharedSlider extends Struct.ComponentSchema {
   attributes: {};
 }
 
+export interface VerbatimVerbatim extends Struct.ComponentSchema {
+  collectionName: 'components_verbatim_verbatims';
+  info: {
+    displayName: 'verbatim';
+    icon: 'information';
+  };
+  attributes: {
+    verbatim: Schema.Attribute.Text;
+  };
+}
+
 export interface VideoVideoZone extends Struct.ComponentSchema {
   collectionName: 'components_video_video_zones';
   info: {
@@ -417,6 +430,7 @@ declare module '@strapi/strapi' {
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'verbatim.verbatim': VerbatimVerbatim;
       'video.video-zone': VideoVideoZone;
     }
   }

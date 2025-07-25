@@ -6,10 +6,10 @@
   },
   "options": {},
   "attributes": {
-    "crossSellArticle": {
+    "testimonial": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::article.article"
+      "target": "api::testimonial.testimonial"
     },
     "title": {
       "type": "string"

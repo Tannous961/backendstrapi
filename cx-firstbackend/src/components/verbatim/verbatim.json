@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_verbatim_verbatims",
+  "info": {
+    "displayName": "verbatim",
+    "icon": "information"
+  },
+  "options": {},
+  "attributes": {
+    "verbatim": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}
