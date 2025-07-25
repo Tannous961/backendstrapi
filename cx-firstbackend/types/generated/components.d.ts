@@ -343,6 +343,44 @@ export interface CrossSellSimilarArticle extends Struct.ComponentSchema {
   };
 }
 
+export interface MenuDropdown extends Struct.ComponentSchema {
+  collectionName: 'components_menu_dropdowns';
+  info: {
+    displayName: 'dropdown';
+    icon: 'arrowDown';
+  };
+  attributes: {
+    section: Schema.Attribute.Relation<'oneToOne', 'api::section.section'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface MenuLink extends Struct.ComponentSchema {
+  collectionName: 'components_menu_links';
+  info: {
+    displayName: 'link';
+    icon: 'link';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    name: Schema.Attribute.String;
+    url: Schema.Attribute.String;
+  };
+}
+
+export interface MenuMenuLinlk extends Struct.ComponentSchema {
+  collectionName: 'components_menu_menu_linlks';
+  info: {
+    displayName: 'menuLinlk';
+    icon: 'link';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    url: Schema.Attribute.String;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -457,6 +495,9 @@ declare module '@strapi/strapi' {
       'component-topbanner.banner': ComponentTopbannerBanner;
       'component-video.video-zone': ComponentVideoVideoZone;
       'cross-sell.similar-article': CrossSellSimilarArticle;
+      'menu.dropdown': MenuDropdown;
+      'menu.link': MenuLink;
+      'menu.menu-linlk': MenuMenuLinlk;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;

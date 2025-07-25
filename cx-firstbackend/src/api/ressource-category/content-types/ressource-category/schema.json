@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ressource_categories",
+  "info": {
+    "singularName": "ressource-category",
+    "pluralName": "ressource-categories",
+    "displayName": "Ressource Category"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "slug": {
+      "type": "uid",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "targetField": "name"
+    },
+    "parent": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ressource.ressource"
+    }
+  }
+}
