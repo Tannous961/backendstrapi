@@ -27,6 +27,27 @@ export interface ComponentBlogBlog extends Struct.ComponentSchema {
   };
 }
 
+export interface ComponentEditorialTextandImage extends Struct.ComponentSchema {
+  collectionName: 'components_component_editorial_textand_images';
+  info: {
+    displayName: 'textandImage';
+    icon: 'apps';
+  };
+  attributes: {
+    freeText1: Schema.Attribute.RichText;
+    freeText2: Schema.Attribute.RichText;
+    imageBlog1: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    imageBlog2: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface ComponentKpiCxInfoCxfirst extends Struct.ComponentSchema {
   collectionName: 'components_component_kpi_cx_info_cxfirsts';
   info: {
@@ -405,6 +426,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'component-banner.banner-top': ComponentBannerBannerTop;
       'component-blog.blog': ComponentBlogBlog;
+      'component-editorial.textand-image': ComponentEditorialTextandImage;
       'component-kpi-cx.info-cxfirst': ComponentKpiCxInfoCxfirst;
       'component-kpi-cx.kpi-client': ComponentKpiCxKpiClient;
       'component-kpi-cx.kpi-site': ComponentKpiCxKpiSite;

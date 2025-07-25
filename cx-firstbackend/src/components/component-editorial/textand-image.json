@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_component_editorial_textand_images",
+  "info": {
+    "displayName": "textandImage",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "freeText1": {
+      "type": "richtext"
+    },
+    "imageBlog1": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "freeText2": {
+      "type": "richtext"
+    },
+    "imageBlog2": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

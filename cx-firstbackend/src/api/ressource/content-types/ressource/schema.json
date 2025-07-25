@@ -25,6 +25,11 @@
     },
     "description": {
       "type": "text"
+    },
+    "informationEditable": {
+      "type": "component",
+      "component": "component-editorial.textand-image",
+      "repeatable": true
     }
   }
 }

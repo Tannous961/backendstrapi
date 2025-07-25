@@ -49,6 +49,74 @@
           "localized": true
         }
       }
+    },
+    "leftZone1": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "component-lefttext.leftzone",
+      "repeatable": false
+    },
+    "rightZone": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "component-righttext.right-zone",
+      "repeatable": false
+    },
+    "verbatime": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "verbatim.verbatim",
+      "repeatable": false
+    },
+    "leftZone2": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "component-lefttext.leftzone",
+      "repeatable": false
+    },
+    "video": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "video.video-zone",
+      "repeatable": false
+    },
+    "freeText": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "crossSelltestimonial": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "cross-sell.similar-article",
+      "repeatable": false
     }
   }
 }

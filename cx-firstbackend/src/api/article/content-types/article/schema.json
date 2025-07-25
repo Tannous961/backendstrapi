@@ -29,22 +29,20 @@
     "slug": {
       "type": "uid"
     },
-    "coverHorizontal": {
-      "type": "media",
+    "authors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::author.author"
+    },
+    "longtext": {
+      "type": "richtext",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ]
+      }
     },
-    "coverVertical": {
+    "Image": {
       "type": "media",
       "pluginOptions": {
         "i18n": {
@@ -59,18 +57,15 @@
         "audios"
       ]
     },
-    "authors": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::author.author"
-    },
-    "longtext": {
-      "type": "richtext",
+    "informationEditable": {
+      "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "component-editorial.textand-image",
+      "repeatable": true
     }
   }
 }
