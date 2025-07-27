@@ -15,7 +15,7 @@
     "leftFeedback": {
       "type": "component",
       "component": "component-testimony.feedback-left",
-      "repeatable": true
+      "repeatable": false
     },
     "centerFeedback": {
       "type": "component",

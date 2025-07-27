@@ -55,9 +55,12 @@ export interface ComponentKpiCxInfoCxfirst extends Struct.ComponentSchema {
     icon: 'chartCircle';
   };
   attributes: {
-    dataClient: Schema.Attribute.Component<'component-kpi-cx.kpi-client', true>;
-    dataSite: Schema.Attribute.Component<'component-kpi-cx.kpi-site', true>;
-    dataUser: Schema.Attribute.Component<'component-kpi-cx.kpi-user', true>;
+    dataClient: Schema.Attribute.Component<
+      'component-kpi-cx.kpi-client',
+      false
+    >;
+    dataSite: Schema.Attribute.Component<'component-kpi-cx.kpi-site', false>;
+    dataUser: Schema.Attribute.Component<'component-kpi-cx.kpi-user', false>;
     description: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
@@ -291,7 +294,7 @@ export interface ComponentTestimonyInfos extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     leftFeedback: Schema.Attribute.Component<
       'component-testimony.feedback-left',
-      true
+      false
     >;
     rightFeedback: Schema.Attribute.Component<
       'component-testimony.feedback-right',

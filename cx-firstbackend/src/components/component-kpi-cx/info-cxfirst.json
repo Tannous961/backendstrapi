@@ -15,17 +15,17 @@
     "dataSite": {
       "type": "component",
       "component": "component-kpi-cx.kpi-site",
-      "repeatable": true
+      "repeatable": false
     },
     "dataUser": {
       "type": "component",
       "component": "component-kpi-cx.kpi-user",
-      "repeatable": true
+      "repeatable": false
     },
     "dataClient": {
       "type": "component",
       "component": "component-kpi-cx.kpi-client",
-      "repeatable": true
+      "repeatable": false
     }
   },
   "config": {}
