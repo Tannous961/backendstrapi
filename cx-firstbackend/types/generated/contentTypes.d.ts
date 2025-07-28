@@ -546,6 +546,12 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::article.article'
     >;
+    name: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID;
     updatedAt: Schema.Attribute.DateTime;
@@ -1186,6 +1192,7 @@ export interface ApiRessourceRessource extends Struct.CollectionTypeSchema {
       'api::ressource.ressource'
     > &
       Schema.Attribute.Private;
+    name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID;
     updatedAt: Schema.Attribute.DateTime;
@@ -1445,6 +1452,12 @@ export interface ApiTestimonialTestimonial extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::testimonial.testimonial'
     >;
+    name: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
     rightZone: Schema.Attribute.Component<
       'component-righttext.right-zone',
@@ -1638,6 +1651,12 @@ export interface ApiUsecaseUsecase extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::usecase.usecase'
     >;
+    name: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
     rightZone: Schema.Attribute.Component<
       'component-righttext.right-zone',

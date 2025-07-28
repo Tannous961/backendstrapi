@@ -53,6 +53,14 @@
       },
       "component": "cross-sell.similar-article",
       "repeatable": false
+    },
+    "name": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
