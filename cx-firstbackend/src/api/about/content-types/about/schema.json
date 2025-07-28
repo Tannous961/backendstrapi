@@ -76,13 +76,22 @@
       "component": "component-map.carte",
       "repeatable": false
     },
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
     "slug": {
       "type": "uid",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "targetField": "title"
     }
   }
 }
