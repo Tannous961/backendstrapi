@@ -53,7 +53,7 @@
         }
       },
       "component": "cross-sell.similar-article",
-      "repeatable": true
+      "repeatable": false
     },
     "cxKpi": {
       "type": "component",

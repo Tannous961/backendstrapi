@@ -972,7 +972,7 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
       }>;
     lastArticle: Schema.Attribute.Component<
       'cross-sell.similar-article',
-      true
+      false
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
