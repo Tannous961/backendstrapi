@@ -110,6 +110,16 @@
       },
       "component": "shared.seo",
       "repeatable": false
+    },
+    "testaaa": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "component": "testaaa.testaaa",
+      "repeatable": false
     }
   }
 }

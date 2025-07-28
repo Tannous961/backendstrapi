@@ -6,11 +6,6 @@
   },
   "options": {},
   "attributes": {
-    "article": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::article.article"
-    },
     "title": {
       "type": "string"
     }

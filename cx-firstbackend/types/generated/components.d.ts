@@ -341,7 +341,6 @@ export interface CrossSellSimilarArticle extends Struct.ComponentSchema {
     icon: 'arrowDown';
   };
   attributes: {
-    article: Schema.Attribute.Relation<'oneToOne', 'api::article.article'>;
     title: Schema.Attribute.String;
   };
 }
@@ -444,6 +443,16 @@ export interface SharedSlider extends Struct.ComponentSchema {
   attributes: {};
 }
 
+export interface TestaaaTestaaa extends Struct.ComponentSchema {
+  collectionName: 'components_testaaa_testaaas';
+  info: {
+    displayName: 'testaaa';
+  };
+  attributes: {
+    testaa: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
 export interface VerbatimVerbatim extends Struct.ComponentSchema {
   collectionName: 'components_verbatim_verbatims';
   info: {
@@ -506,6 +515,7 @@ declare module '@strapi/strapi' {
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'testaaa.testaaa': TestaaaTestaaa;
       'verbatim.verbatim': VerbatimVerbatim;
       'video.video-zone': VideoVideoZone;
     }
