@@ -24,7 +24,7 @@
         }
       },
       "component": "component-banner.banner-top",
-      "repeatable": true
+      "repeatable": false
     },
     "leftSection1": {
       "type": "component",
@@ -34,7 +34,7 @@
         }
       },
       "component": "component-lefttext.leftzone",
-      "repeatable": true
+      "repeatable": false
     },
     "rightSection": {
       "type": "component",
@@ -44,7 +44,7 @@
         }
       },
       "component": "component-righttext.right-zone",
-      "repeatable": true
+      "repeatable": false
     },
     "leftSection2": {
       "type": "component",
@@ -54,7 +54,7 @@
         }
       },
       "component": "component-lefttext.leftzone",
-      "repeatable": true
+      "repeatable": false
     },
     "seo": {
       "type": "component",
@@ -64,7 +64,7 @@
         }
       },
       "component": "shared.seo",
-      "repeatable": true
+      "repeatable": false
     },
     "infoCarte": {
       "type": "component",

@@ -427,7 +427,7 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
-    banner: Schema.Attribute.Component<'component-banner.banner-top', true> &
+    banner: Schema.Attribute.Component<'component-banner.banner-top', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -444,7 +444,7 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
       }>;
     leftSection1: Schema.Attribute.Component<
       'component-lefttext.leftzone',
-      true
+      false
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -453,7 +453,7 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
       }>;
     leftSection2: Schema.Attribute.Component<
       'component-lefttext.leftzone',
-      true
+      false
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -465,14 +465,14 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     rightSection: Schema.Attribute.Component<
       'component-righttext.right-zone',
-      true
+      false
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    seo: Schema.Attribute.Component<'shared.seo', true> &
+    seo: Schema.Attribute.Component<'shared.seo', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
