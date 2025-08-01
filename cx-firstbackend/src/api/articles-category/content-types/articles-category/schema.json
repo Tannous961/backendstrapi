@@ -36,6 +36,16 @@
         }
       },
       "targetField": "name"
+    },
+    "banner": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "component-topbanner.banner",
+      "repeatable": false
     }
   }
 }
