@@ -17,6 +17,9 @@
     },
     "formId": {
       "type": "string"
+    },
+    "url": {
+      "type": "string"
     }
   },
   "config": {}
