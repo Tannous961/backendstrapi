@@ -124,7 +124,8 @@ export interface ComponentMapCarte extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
-    script: Schema.Attribute.RichText;
+    formId: Schema.Attribute.String;
+    portalId: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }

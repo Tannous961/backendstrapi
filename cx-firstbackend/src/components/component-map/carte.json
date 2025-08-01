@@ -12,8 +12,11 @@
     "description": {
       "type": "text"
     },
-    "script": {
-      "type": "richtext"
+    "portalId": {
+      "type": "string"
+    },
+    "formId": {
+      "type": "string"
     }
   },
   "config": {}
