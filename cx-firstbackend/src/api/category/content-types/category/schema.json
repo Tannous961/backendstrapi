@@ -49,6 +49,16 @@
       },
       "component": "shared.seo",
       "repeatable": false
+    },
+    "banner": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "component-topbanner.banner",
+      "repeatable": false
     }
   }
 }
