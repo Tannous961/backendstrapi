@@ -513,6 +513,10 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    articles_category: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::articles-category.articles-category'
+    >;
     articlesSimilar: Schema.Attribute.Component<
       'cross-sell.similar-article',
       false
@@ -597,7 +601,6 @@ export interface ApiArticlesCategoryArticlesCategory
           localized: true;
         };
       }>;
-    parent: Schema.Attribute.Relation<'oneToMany', 'api::article.article'>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'name'> &
       Schema.Attribute.SetPluginOptions<{
@@ -1112,7 +1115,6 @@ export interface ApiRessourceCategoryRessourceCategory
           localized: true;
         };
       }>;
-    parent: Schema.Attribute.Relation<'oneToMany', 'api::ressource.ressource'>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'name'> &
       Schema.Attribute.SetPluginOptions<{
@@ -1212,6 +1214,10 @@ export interface ApiRessourceRessource extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    ressource_category: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::ressource-category.ressource-category'
+    >;
     slug: Schema.Attribute.UID;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1390,10 +1396,6 @@ export interface ApiTestimonialCategoryTestimonialCategory
           localized: true;
         };
       }>;
-    parent: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::testimonial.testimonial'
-    >;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'name'> &
       Schema.Attribute.SetPluginOptions<{
@@ -1492,6 +1494,10 @@ export interface ApiTestimonialTestimonial extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    testimonial_category: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::testimonial-category.testimonial-category'
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1541,7 +1547,6 @@ export interface ApiUsecaseCategoryUsecaseCategory
           localized: true;
         };
       }>;
-    parent: Schema.Attribute.Relation<'oneToMany', 'api::usecase.usecase'>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'name'> &
       Schema.Attribute.SetPluginOptions<{
@@ -1694,6 +1699,10 @@ export interface ApiUsecaseUsecase extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    usecase_category: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::usecase-category.usecase-category'
+    >;
     verbatime: Schema.Attribute.Component<'verbatim.verbatim', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

@@ -31,11 +31,6 @@
         }
       },
       "targetField": "name"
-    },
-    "parent": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::ressource.ressource"
     }
   }
 }

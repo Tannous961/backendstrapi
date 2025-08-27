@@ -61,6 +61,11 @@
           "localized": true
         }
       }
+    },
+    "articles_category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::articles-category.articles-category"
     }
   }
 }

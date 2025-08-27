@@ -15,11 +15,6 @@
     }
   },
   "attributes": {
-    "parent": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::article.article"
-    },
     "name": {
       "type": "string",
       "pluginOptions": {

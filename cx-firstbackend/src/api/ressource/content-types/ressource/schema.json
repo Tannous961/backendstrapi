@@ -26,6 +26,11 @@
     },
     "name": {
       "type": "string"
+    },
+    "ressource_category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ressource-category.ressource-category"
     }
   }
 }
