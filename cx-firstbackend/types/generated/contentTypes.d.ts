@@ -1290,39 +1290,12 @@ export interface ApiSolutionSolution extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    characteristicConnect: Schema.Attribute.Component<
-      'component-solution-connect.infos',
-      true
-    > &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    characteristicDeploy: Schema.Attribute.Component<
-      'component-solution-connect.infos',
-      true
-    > &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    characteristicExplore: Schema.Attribute.Component<
-      'component-solution-connect.infos',
-      true
-    > &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     infoExplore: Schema.Attribute.Component<
       'component-solution-connect.infos',
-      false
+      true
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1331,7 +1304,7 @@ export interface ApiSolutionSolution extends Struct.SingleTypeSchema {
       }>;
     infosConnect: Schema.Attribute.Component<
       'component-solution-connect.infos',
-      false
+      true
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1340,7 +1313,7 @@ export interface ApiSolutionSolution extends Struct.SingleTypeSchema {
       }>;
     infosDeploy: Schema.Attribute.Component<
       'component-solution-connect.infos',
-      false
+      true
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

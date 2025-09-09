@@ -172,6 +172,7 @@ export interface ComponentSolutionConnectInfos extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
+    features: Schema.Attribute.Component<'component-solution.connect', true>;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
   };
@@ -185,6 +186,7 @@ export interface ComponentSolutionConnect extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
   };
 }

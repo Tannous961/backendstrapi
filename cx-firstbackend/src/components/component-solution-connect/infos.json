@@ -21,6 +21,11 @@
         "videos",
         "audios"
       ]
+    },
+    "features": {
+      "type": "component",
+      "component": "component-solution.connect",
+      "repeatable": true
     }
   },
   "config": {}
