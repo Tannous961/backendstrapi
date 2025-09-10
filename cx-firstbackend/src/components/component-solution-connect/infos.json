@@ -26,6 +26,11 @@
       "type": "component",
       "component": "component-solution.connect",
       "repeatable": true
+    },
+    "tag": {
+      "type": "component",
+      "component": "tag.tag",
+      "repeatable": true
     }
   },
   "config": {}

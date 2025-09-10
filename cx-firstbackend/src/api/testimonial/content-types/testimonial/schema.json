@@ -41,7 +41,7 @@
         }
       },
       "component": "component-lefttext.leftzone",
-      "repeatable": false
+      "repeatable": true
     },
     "rightZone": {
       "type": "component",
@@ -51,7 +51,7 @@
         }
       },
       "component": "component-righttext.right-zone",
-      "repeatable": false
+      "repeatable": true
     },
     "verbatim": {
       "type": "component",
@@ -61,7 +61,7 @@
         }
       },
       "component": "verbatim.verbatim",
-      "repeatable": false
+      "repeatable": true
     },
     "leftzone2": {
       "type": "component",
@@ -71,7 +71,7 @@
         }
       },
       "component": "component-lefttext.leftzone",
-      "repeatable": false
+      "repeatable": true
     },
     "video": {
       "type": "component",
@@ -81,7 +81,7 @@
         }
       },
       "component": "video.video-zone",
-      "repeatable": false
+      "repeatable": true
     },
     "freeText": {
       "type": "richtext",

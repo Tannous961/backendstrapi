@@ -496,6 +496,195 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiActivitySectorCategoryActivitySectorCategory
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'activity_sector_categories';
+  info: {
+    displayName: 'Activity Sector Category';
+    pluralName: 'activity-sector-categories';
+    singularName: 'activity-sector-category';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::activity-sector-category.activity-sector-category'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiActivitySectorActivitySector
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'activity_sectors';
+  info: {
+    displayName: 'Activity Sector';
+    pluralName: 'activity-sectors';
+    singularName: 'activity-sector';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    activity_sector_category: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::activity-sector-category.activity-sector-category'
+    >;
+    banner: Schema.Attribute.Component<'component-topbanner.banner', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    freetext: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    leftzone1: Schema.Attribute.Component<'component-lefttext.leftzone', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    leftzone2: Schema.Attribute.Component<'component-lefttext.leftzone', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::activity-sector.activity-sector'
+    >;
+    name: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    rightzone: Schema.Attribute.Component<
+      'component-righttext.right-zone',
+      true
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    slug: Schema.Attribute.UID &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    verbatim: Schema.Attribute.Component<'verbatim.verbatim', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    video: Schema.Attribute.Component<'video.video-zone', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+  };
+}
+
+export interface ApiActivitysectorListActivitysectorList
+  extends Struct.SingleTypeSchema {
+  collectionName: 'activitysector_lists';
+  info: {
+    displayName: 'activitysectorList';
+    pluralName: 'activitysector-lists';
+    singularName: 'activitysector-list';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    activity_sector: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::activity-sector.activity-sector'
+    >;
+    banner: Schema.Attribute.Component<'component-topbanner.banner', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::activitysector-list.activitysector-list'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    slug: Schema.Attribute.UID &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   collectionName: 'articles';
   info: {
@@ -756,6 +945,38 @@ export interface ApiCategoryCategory extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCguPageCguPage extends Struct.SingleTypeSchema {
+  collectionName: 'cgu_pages';
+  info: {
+    displayName: 'CGUPage';
+    pluralName: 'cgu-pages';
+    singularName: 'cgu-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    banner: Schema.Attribute.Component<'component-topbanner.banner', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    freetext: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::cgu-page.cgu-page'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    slug: Schema.Attribute.UID;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1045,6 +1266,67 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiLegalPageLegalPage extends Struct.SingleTypeSchema {
+  collectionName: 'legal_pages';
+  info: {
+    displayName: 'legalPage';
+    pluralName: 'legal-pages';
+    singularName: 'legal-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    banner: Schema.Attribute.Component<'component-topbanner.banner', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    freetext: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::legal-page.legal-page'
+    >;
+    name: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    slug: Schema.Attribute.UID &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiMainMenuMainMenu extends Struct.SingleTypeSchema {
   collectionName: 'main_menus';
   info: {
@@ -1078,6 +1360,38 @@ export interface ApiMainMenuMainMenu extends Struct.SingleTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPoliticPagePoliticPage extends Struct.SingleTypeSchema {
+  collectionName: 'politic_pages';
+  info: {
+    displayName: 'politicPage';
+    pluralName: 'politic-pages';
+    singularName: 'politic-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    banner: Schema.Attribute.Component<'component-topbanner.banner', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    freetext: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::politic-page.politic-page'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    slug: Schema.Attribute.UID;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1422,19 +1736,13 @@ export interface ApiTestimonialTestimonial extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    leftzone1: Schema.Attribute.Component<
-      'component-lefttext.leftzone',
-      false
-    > &
+    leftzone1: Schema.Attribute.Component<'component-lefttext.leftzone', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    leftzone2: Schema.Attribute.Component<
-      'component-lefttext.leftzone',
-      false
-    > &
+    leftzone2: Schema.Attribute.Component<'component-lefttext.leftzone', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1454,7 +1762,7 @@ export interface ApiTestimonialTestimonial extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     rightZone: Schema.Attribute.Component<
       'component-righttext.right-zone',
-      false
+      true
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1474,13 +1782,13 @@ export interface ApiTestimonialTestimonial extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    verbatim: Schema.Attribute.Component<'verbatim.verbatim', false> &
+    verbatim: Schema.Attribute.Component<'verbatim.verbatim', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    video: Schema.Attribute.Component<'video.video-zone', false> &
+    video: Schema.Attribute.Component<'video.video-zone', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1624,19 +1932,13 @@ export interface ApiUsecaseUsecase extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    leftZone1: Schema.Attribute.Component<
-      'component-lefttext.leftzone',
-      false
-    > &
+    leftZone1: Schema.Attribute.Component<'component-lefttext.leftzone', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    leftZone2: Schema.Attribute.Component<
-      'component-lefttext.leftzone',
-      false
-    > &
+    leftZone2: Schema.Attribute.Component<'component-lefttext.leftzone', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1656,7 +1958,7 @@ export interface ApiUsecaseUsecase extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     rightZone: Schema.Attribute.Component<
       'component-righttext.right-zone',
-      false
+      true
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1676,13 +1978,13 @@ export interface ApiUsecaseUsecase extends Struct.CollectionTypeSchema {
       'oneToOne',
       'api::usecase-category.usecase-category'
     >;
-    verbatime: Schema.Attribute.Component<'verbatim.verbatim', false> &
+    verbatime: Schema.Attribute.Component<'verbatim.verbatim', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    video: Schema.Attribute.Component<'video.video-zone', false> &
+    video: Schema.Attribute.Component<'video.video-zone', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -2202,16 +2504,22 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::about.about': ApiAboutAbout;
+      'api::activity-sector-category.activity-sector-category': ApiActivitySectorCategoryActivitySectorCategory;
+      'api::activity-sector.activity-sector': ApiActivitySectorActivitySector;
+      'api::activitysector-list.activitysector-list': ApiActivitysectorListActivitysectorList;
       'api::article.article': ApiArticleArticle;
       'api::articles-category.articles-category': ApiArticlesCategoryArticlesCategory;
       'api::author.author': ApiAuthorAuthor;
       'api::blog-list.blog-list': ApiBlogListBlogList;
       'api::category.category': ApiCategoryCategory;
+      'api::cgu-page.cgu-page': ApiCguPageCguPage;
       'api::echange-expert.echange-expert': ApiEchangeExpertEchangeExpert;
       'api::footer.footer': ApiFooterFooter;
       'api::global.global': ApiGlobalGlobal;
       'api::home-page.home-page': ApiHomePageHomePage;
+      'api::legal-page.legal-page': ApiLegalPageLegalPage;
       'api::main-menu.main-menu': ApiMainMenuMainMenu;
+      'api::politic-page.politic-page': ApiPoliticPagePoliticPage;
       'api::ressource-category.ressource-category': ApiRessourceCategoryRessourceCategory;
       'api::ressource-list.ressource-list': ApiRessourceListRessourceList;
       'api::ressource.ressource': ApiRessourceRessource;

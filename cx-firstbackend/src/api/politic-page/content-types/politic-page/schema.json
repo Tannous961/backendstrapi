@@ -1,0 +1,34 @@
+{
+  "kind": "singleType",
+  "collectionName": "politic_pages",
+  "info": {
+    "singularName": "politic-page",
+    "pluralName": "politic-pages",
+    "displayName": "politicPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "banner": {
+      "type": "component",
+      "component": "component-topbanner.banner",
+      "repeatable": false
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "name": {
+      "type": "string"
+    },
+    "freetext": {
+      "type": "text"
+    }
+  }
+}

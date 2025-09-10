@@ -174,6 +174,7 @@ export interface ComponentSolutionConnectInfos extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     features: Schema.Attribute.Component<'component-solution.connect', true>;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    tag: Schema.Attribute.Component<'tag.tag', true>;
     title: Schema.Attribute.String;
   };
 }
@@ -319,7 +320,6 @@ export interface ComponentTopbannerBanner extends Struct.ComponentSchema {
       'images' | 'files' | 'videos' | 'audios'
     >;
     description: Schema.Attribute.Text;
-    horizontalimage: Schema.Attribute.Media<'images' | 'files'>;
     title: Schema.Attribute.String;
   };
 }
@@ -447,6 +447,17 @@ export interface SharedSlider extends Struct.ComponentSchema {
   attributes: {};
 }
 
+export interface TagTag extends Struct.ComponentSchema {
+  collectionName: 'components_tag_tags';
+  info: {
+    displayName: 'tag';
+    icon: 'bulletList';
+  };
+  attributes: {
+    tag: Schema.Attribute.String;
+  };
+}
+
 export interface TestaaaTestaaa extends Struct.ComponentSchema {
   collectionName: 'components_testaaa_testaaas';
   info: {
@@ -519,6 +530,7 @@ declare module '@strapi/strapi' {
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'tag.tag': TagTag;
       'testaaa.testaaa': TestaaaTestaaa;
       'verbatim.verbatim': VerbatimVerbatim;
       'video.video-zone': VideoVideoZone;
