@@ -315,13 +315,7 @@ export interface ComponentTopbannerBanner extends Struct.ComponentSchema {
     displayName: 'banner';
     icon: 'picture';
   };
-  attributes: {
-    backgroundimage: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    description: Schema.Attribute.Text;
-    title: Schema.Attribute.String;
-  };
+  attributes: {};
 }
 
 export interface ComponentVideoVideoZone extends Struct.ComponentSchema {
@@ -385,6 +379,15 @@ export interface MenuMenuLinlk extends Struct.ComponentSchema {
     title: Schema.Attribute.String;
     url: Schema.Attribute.String;
   };
+}
+
+export interface SectionSection extends Struct.ComponentSchema {
+  collectionName: 'components_section_sections';
+  info: {
+    displayName: 'section';
+    icon: 'apps';
+  };
+  attributes: {};
 }
 
 export interface SharedMedia extends Struct.ComponentSchema {
@@ -525,6 +528,7 @@ declare module '@strapi/strapi' {
       'menu.dropdown': MenuDropdown;
       'menu.link': MenuLink;
       'menu.menu-linlk': MenuMenuLinlk;
+      'section.section': SectionSection;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;

@@ -1266,6 +1266,65 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiLandingpageLandingpage extends Struct.CollectionTypeSchema {
+  collectionName: 'landingpages';
+  info: {
+    displayName: 'landingpage';
+    pluralName: 'landingpages';
+    singularName: 'landingpage';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::landingpage.landingpage'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    section: Schema.Attribute.DynamicZone<
+      [
+        'component-topbanner.banner',
+        'component-testimony.infos',
+        'component-testimony.feedback-right',
+        'component-testimony.feedback-left',
+        'component-testimony.feedback-center',
+        'component-solution.infos',
+        'component-solution.explore',
+        'component-solution.deploy',
+        'component-solution.connect',
+        'component-righttext.right-zone',
+        'component-lefttext.leftzone',
+        'component-qualimetrie.information',
+        'component-kpi-cx.kpi-user',
+        'component-kpi-cx.kpi-site',
+        'component-kpi-cx.kpi-client',
+        'component-kpi-cx.info-cxfirst',
+        'component-editorial.textand-image',
+        'component-video.video-zone',
+        'verbatim.verbatim',
+      ]
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiLegalPageLegalPage extends Struct.SingleTypeSchema {
   collectionName: 'legal_pages';
   info: {
@@ -2517,6 +2576,7 @@ declare module '@strapi/strapi' {
       'api::footer.footer': ApiFooterFooter;
       'api::global.global': ApiGlobalGlobal;
       'api::home-page.home-page': ApiHomePageHomePage;
+      'api::landingpage.landingpage': ApiLandingpageLandingpage;
       'api::legal-page.legal-page': ApiLegalPageLegalPage;
       'api::main-menu.main-menu': ApiMainMenuMainMenu;
       'api::politic-page.politic-page': ApiPoliticPagePoliticPage;
