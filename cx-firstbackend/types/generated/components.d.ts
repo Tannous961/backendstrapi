@@ -315,7 +315,13 @@ export interface ComponentTopbannerBanner extends Struct.ComponentSchema {
     displayName: 'banner';
     icon: 'picture';
   };
-  attributes: {};
+  attributes: {
+    backgroundimage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    description: Schema.Attribute.Text;
+    text: Schema.Attribute.String;
+  };
 }
 
 export interface ComponentVideoVideoZone extends Struct.ComponentSchema {
