@@ -1457,6 +1457,34 @@ export interface ApiPoliticPagePoliticPage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiPopinPopin extends Struct.SingleTypeSchema {
+  collectionName: 'popins';
+  info: {
+    displayName: 'popin';
+    pluralName: 'popins';
+    singularName: 'popin';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    formIdpopin: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::popin.popin'> &
+      Schema.Attribute.Private;
+    portalIdpopin: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiRessourceCategoryRessourceCategory
   extends Struct.CollectionTypeSchema {
   collectionName: 'ressource_categories';
@@ -2580,6 +2608,7 @@ declare module '@strapi/strapi' {
       'api::legal-page.legal-page': ApiLegalPageLegalPage;
       'api::main-menu.main-menu': ApiMainMenuMainMenu;
       'api::politic-page.politic-page': ApiPoliticPagePoliticPage;
+      'api::popin.popin': ApiPopinPopin;
       'api::ressource-category.ressource-category': ApiRessourceCategoryRessourceCategory;
       'api::ressource-list.ressource-list': ApiRessourceListRessourceList;
       'api::ressource.ressource': ApiRessourceRessource;

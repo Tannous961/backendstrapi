@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "popins",
+  "info": {
+    "singularName": "popin",
+    "pluralName": "popins",
+    "displayName": "popin"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "formIdpopin": {
+      "type": "string"
+    },
+    "portalIdpopin": {
+      "type": "string"
+    }
+  }
+}
