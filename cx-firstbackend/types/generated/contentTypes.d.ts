@@ -547,6 +547,10 @@ export interface ApiActivitySectorActivitySector
       'oneToOne',
       'api::activity-sector-category.activity-sector-category'
     >;
+    activity_sous_sector_category: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::activity-sector-category.activity-sector-category'
+    >;
     banner: Schema.Attribute.Component<'component-topbanner.banner', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -703,6 +707,10 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   };
   attributes: {
     articles_category: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::articles-category.articles-category'
+    >;
+    articles_sous_category: Schema.Attribute.Relation<
       'oneToOne',
       'api::articles-category.articles-category'
     >;
@@ -1890,6 +1898,10 @@ export interface ApiTestimonialTestimonial extends Struct.CollectionTypeSchema {
       'oneToOne',
       'api::testimonial-category.testimonial-category'
     >;
+    testimonial_sous_category: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::testimonial-category.testimonial-category'
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -2086,6 +2098,10 @@ export interface ApiUsecaseUsecase extends Struct.CollectionTypeSchema {
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     usecase_category: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::usecase-category.usecase-category'
+    >;
+    usecase_sous_category: Schema.Attribute.Relation<
       'oneToOne',
       'api::usecase-category.usecase-category'
     >;

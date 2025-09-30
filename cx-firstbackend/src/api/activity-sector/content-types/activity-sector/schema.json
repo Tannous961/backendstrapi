@@ -103,6 +103,11 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::activity-sector-category.activity-sector-category"
+    },
+    "activity_sous_sector_category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::activity-sector-category.activity-sector-category"
     }
   }
 }

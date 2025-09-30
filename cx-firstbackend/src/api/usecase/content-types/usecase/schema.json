@@ -113,6 +113,11 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::usecase-category.usecase-category"
+    },
+    "usecase_sous_category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::usecase-category.usecase-category"
     }
   }
 }
