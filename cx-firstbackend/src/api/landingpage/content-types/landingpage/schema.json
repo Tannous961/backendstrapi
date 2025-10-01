@@ -35,14 +35,19 @@
         "component-righttext.right-zone",
         "component-lefttext.leftzone",
         "component-qualimetrie.information",
-        "component-kpi-cx.kpi-user",
-        "component-kpi-cx.kpi-site",
-        "component-kpi-cx.kpi-client",
         "component-kpi-cx.info-cxfirst",
         "component-editorial.textand-image",
         "component-video.video-zone",
         "verbatim.verbatim"
       ]
+    },
+    "name": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

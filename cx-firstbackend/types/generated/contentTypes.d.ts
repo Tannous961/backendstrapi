@@ -1298,6 +1298,12 @@ export interface ApiLandingpageLandingpage extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::landingpage.landingpage'
     >;
+    name: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
     section: Schema.Attribute.DynamicZone<
       [
@@ -1313,9 +1319,6 @@ export interface ApiLandingpageLandingpage extends Struct.CollectionTypeSchema {
         'component-righttext.right-zone',
         'component-lefttext.leftzone',
         'component-qualimetrie.information',
-        'component-kpi-cx.kpi-user',
-        'component-kpi-cx.kpi-site',
-        'component-kpi-cx.kpi-client',
         'component-kpi-cx.info-cxfirst',
         'component-editorial.textand-image',
         'component-video.video-zone',
