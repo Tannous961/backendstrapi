@@ -109,12 +109,17 @@
         }
       }
     },
-    "usecase_category": {
+    "filtre_usecase_type": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::usecase-category.usecase-category"
     },
-    "usecase_sous_category": {
+    "filtre_usecase_autres": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::usecase-category.usecase-category"
+    },
+    "filtre_usecase_theme": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::usecase-category.usecase-category"

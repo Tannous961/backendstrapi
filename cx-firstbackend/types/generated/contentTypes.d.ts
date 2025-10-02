@@ -710,14 +710,6 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    articles_category: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::articles-category.articles-category'
-    >;
-    articles_sous_category: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::articles-category.articles-category'
-    >;
     articlesSimilar: Schema.Attribute.Component<
       'cross-sell.similar-article',
       false
@@ -737,6 +729,18 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    filtre_articles_autres: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::articles-category.articles-category'
+    >;
+    filtre_articles_theme: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::articles-category.articles-category'
+    >;
+    filtre_articles_type: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::articles-category.articles-category'
+    >;
     informationEditable: Schema.Attribute.Component<
       'component-editorial.textand-image',
       true
@@ -1642,6 +1646,18 @@ export interface ApiRessourceRessource extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    filtre_ressource_autres: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::ressource-category.ressource-category'
+    >;
+    filtre_ressource_theme: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::ressource-category.ressource-category'
+    >;
+    filtre_ressource_type: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::ressource-category.ressource-category'
+    >;
     informationEditable: Schema.Attribute.Component<
       'component-editorial.textand-image',
       true
@@ -1654,10 +1670,6 @@ export interface ApiRessourceRessource extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    ressource_category: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::ressource-category.ressource-category'
-    >;
     slug: Schema.Attribute.UID;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -2056,6 +2068,18 @@ export interface ApiUsecaseUsecase extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    filtre_usecase_autres: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::usecase-category.usecase-category'
+    >;
+    filtre_usecase_theme: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::usecase-category.usecase-category'
+    >;
+    filtre_usecase_type: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::usecase-category.usecase-category'
+    >;
     freeText: Schema.Attribute.RichText &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -2104,14 +2128,6 @@ export interface ApiUsecaseUsecase extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    usecase_category: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::usecase-category.usecase-category'
-    >;
-    usecase_sous_category: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::usecase-category.usecase-category'
-    >;
     verbatime: Schema.Attribute.Component<'verbatim.verbatim', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

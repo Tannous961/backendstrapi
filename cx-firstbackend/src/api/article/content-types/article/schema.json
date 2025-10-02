@@ -62,12 +62,17 @@
         }
       }
     },
-    "articles_category": {
+    "filtre_articles_theme": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::articles-category.articles-category"
     },
-    "articles_sous_category": {
+    "filtre_articles_type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::articles-category.articles-category"
+    },
+    "filtre_articles_autres": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::articles-category.articles-category"

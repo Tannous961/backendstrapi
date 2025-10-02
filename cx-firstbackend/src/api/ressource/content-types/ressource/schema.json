@@ -27,7 +27,17 @@
     "name": {
       "type": "string"
     },
-    "ressource_category": {
+    "filtre_ressource_type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ressource-category.ressource-category"
+    },
+    "filtre_ressource_theme": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ressource-category.ressource-category"
+    },
+    "filtre_ressource_autres": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::ressource-category.ressource-category"
