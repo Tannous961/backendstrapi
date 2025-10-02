@@ -24,6 +24,11 @@
       "component": "component-editorial.textand-image",
       "repeatable": true
     },
+    "form": {
+      "type": "component",
+      "component": "component-map.carte",
+      "repeatable": false
+    },
     "name": {
       "type": "string"
     },

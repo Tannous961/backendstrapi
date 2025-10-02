@@ -1658,6 +1658,7 @@ export interface ApiRessourceRessource extends Struct.CollectionTypeSchema {
       'oneToOne',
       'api::ressource-category.ressource-category'
     >;
+    form: Schema.Attribute.Component<'component-map.carte', false>;
     informationEditable: Schema.Attribute.Component<
       'component-editorial.textand-image',
       true

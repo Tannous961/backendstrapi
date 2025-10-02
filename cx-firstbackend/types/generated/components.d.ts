@@ -35,12 +35,7 @@ export interface ComponentEditorialTextandImage extends Struct.ComponentSchema {
   };
   attributes: {
     freeText1: Schema.Attribute.RichText;
-    freeText2: Schema.Attribute.RichText;
     imageBlog1: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
-    imageBlog2: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
     >;

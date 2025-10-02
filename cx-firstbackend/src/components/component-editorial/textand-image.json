@@ -21,19 +21,6 @@
         "videos",
         "audios"
       ]
-    },
-    "freeText2": {
-      "type": "richtext"
-    },
-    "imageBlog2": {
-      "type": "media",
-      "multiple": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
     }
   },
   "config": {}
