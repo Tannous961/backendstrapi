@@ -1707,7 +1707,7 @@ export interface ApiSectionSection extends Struct.CollectionTypeSchema {
 export interface ApiSolutionSolution extends Struct.SingleTypeSchema {
   collectionName: 'solutions';
   info: {
-    displayName: 'solution';
+    displayName: 'plateforme';
     pluralName: 'solutions';
     singularName: 'solution';
   };
