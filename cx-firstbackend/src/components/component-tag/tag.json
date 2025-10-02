@@ -6,11 +6,7 @@
   "options": {},
   "attributes": {
     "tag": {
-      "type": "enumeration",
-      "enum": [
-        "Economie",
-        "Customer"
-      ]
+      "type": "string"
     }
   },
   "config": {}

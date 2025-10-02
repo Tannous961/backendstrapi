@@ -239,7 +239,7 @@ export interface ComponentTagTag extends Struct.ComponentSchema {
     displayName: 'tag';
   };
   attributes: {
-    tag: Schema.Attribute.Enumeration<['Economie', 'Customer']>;
+    tag: Schema.Attribute.String;
   };
 }
 
