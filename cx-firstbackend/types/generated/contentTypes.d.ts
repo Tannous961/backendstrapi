@@ -543,14 +543,6 @@ export interface ApiActivitySectorActivitySector
     };
   };
   attributes: {
-    activity_sector_category: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::activity-sector-category.activity-sector-category'
-    >;
-    activity_sous_sector_category: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::activity-sector-category.activity-sector-category'
-    >;
     banner: Schema.Attribute.Component<'component-topbanner.banner', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -560,6 +552,18 @@ export interface ApiActivitySectorActivitySector
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    filtre_sector_autres: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::activity-sector-category.activity-sector-category'
+    >;
+    filtre_sector_theme: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::activity-sector-category.activity-sector-category'
+    >;
+    filtre_sector_type: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::activity-sector-category.activity-sector-category'
+    >;
     freetext: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

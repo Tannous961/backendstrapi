@@ -99,12 +99,17 @@
         }
       }
     },
-    "activity_sector_category": {
+    "filtre_sector_type": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::activity-sector-category.activity-sector-category"
     },
-    "activity_sous_sector_category": {
+    "filtre_sector_theme": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::activity-sector-category.activity-sector-category"
+    },
+    "filtre_sector_autres": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::activity-sector-category.activity-sector-category"
