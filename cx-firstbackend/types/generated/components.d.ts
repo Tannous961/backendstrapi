@@ -1,52 +1,5 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
-export interface AutresfiltresAutresfiltres extends Struct.ComponentSchema {
-  collectionName: 'components_autresfiltres_autresfiltres';
-  info: {
-    displayName: 'autresfiltres';
-    icon: 'bulletList';
-  };
-  attributes: {
-    equipeconcerne: Schema.Attribute.Enumeration<
-      [
-        'Direction',
-        'Marketing',
-        'Exp\u00E9rience client',
-        'IT / Digital',
-        'RH',
-        'R\u00E9seaux',
-        'Op\u00E9rations',
-        'Transverses',
-      ]
-    >;
-    format: Schema.Attribute.Enumeration<
-      [
-        'Livre blanc',
-        '\u00C9tude',
-        'Replay',
-        'Infographie',
-        'Slides',
-        'Podcast',
-        'Guide',
-      ]
-    >;
-    secteurs: Schema.Attribute.Enumeration<
-      [
-        'Automobile',
-        'BTP / N\u00E9goce',
-        'Banque / Assurance',
-        'Distribution alimentaire',
-        'Immobilier',
-        'Industries / Energies',
-        'Restauration',
-        'Retail',
-        'Sant\u00E9 / Beaut\u00E9',
-        'Tourisme / Loisirs',
-      ]
-    >;
-  };
-}
-
 export interface ComponentBannerBannerTop extends Struct.ComponentSchema {
   collectionName: 'components_component_banner_banner_tops';
   info: {
@@ -396,45 +349,149 @@ export interface CrossSellSimilarArticle extends Struct.ComponentSchema {
 export interface FiltreFiltre extends Struct.ComponentSchema {
   collectionName: 'components_filtre_filtres';
   info: {
-    displayName: 'filtre';
+    displayName: 'filtrecommun';
     icon: 'bulletList';
   };
   attributes: {
-    fonctionnalite: Schema.Attribute.Enumeration<
-      [
-        'Dataviz',
-        'Avis en ligne',
-        'Pr\u00E9sence en ligne',
-        'Verbatims',
-        'Dashboard',
-        "Plans d'actions",
-        'Alertes',
-        'Collaboration',
-        'Interactions',
-        'Gestion des utilisateurs',
-        'Int\u00E9gration & API',
-        'Accessibilit\u00E9',
-        'Score',
-        'IA',
-        'Questionnaire',
-      ]
-    >;
-    theme: Schema.Attribute.Enumeration<
-      [
-        'Animation r\u00E9seaux',
-        'Autocheck',
-        'Feedback Management',
-        'Gestion e-r\u00E9putation',
-        'VOC & enqu\u00EAtes de sat',
-        'Enqu\u00EAtes collaborateur',
-        'Labelliser son r\u00E9seau',
-        'Analyse s\u00E9mantique',
-        'Animation qualit\u00E9',
-        'Enqu\u00EAtes myst\u00E8re',
-        'Exp\u00E9rience client',
-        'Satisfaction client',
-      ]
-    >;
+    fonctionnalites: Schema.Attribute.JSON &
+      Schema.Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        [
+          'Dataviz',
+          'Avis en ligne',
+          'Pr\u00E9sence en ligne',
+          'Verbatims',
+          'Dashboard',
+          "Plans d'actions",
+          'Alertes',
+          'Collaboration',
+          'Interactions',
+          'Gestion des utilisateurs',
+          'Int\u00E9gration & API',
+          'Accessibilit\u00E9',
+          'Score',
+          'IA',
+          'Questionnaire',
+        ]
+      > &
+      Schema.Attribute.DefaultTo<'[]'>;
+    themes: Schema.Attribute.JSON &
+      Schema.Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        [
+          'Animation r\u00E9seaux',
+          'Autocheck',
+          'Feedback Management',
+          'Gestion e-r\u00E9putation',
+          'VOC & enqu\u00EAtes de sat',
+          'Enqu\u00EAtes collaborateur',
+          'Labelliser son r\u00E9seau',
+          'Analyse s\u00E9mantique',
+          'Animation qualit\u00E9',
+          'Enqu\u00EAtes myst\u00E8re',
+          'Exp\u00E9rience client',
+          'Satisfaction client',
+        ]
+      > &
+      Schema.Attribute.DefaultTo<'[]'>;
+  };
+}
+
+export interface FiltreFiltreautres2 extends Struct.ComponentSchema {
+  collectionName: 'components_filtre_filtreautres2s';
+  info: {
+    displayName: 'filtreautres2';
+    icon: 'bulletList';
+  };
+  attributes: {
+    equipeconcernes: Schema.Attribute.JSON &
+      Schema.Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        [
+          'Direction',
+          'Marketing',
+          'Exp\u00E9rience client',
+          'IT / Digital',
+          'RH',
+          'R\u00E9seaux',
+          'Op\u00E9rations',
+          'Transverses',
+        ]
+      > &
+      Schema.Attribute.DefaultTo<'[]'>;
+    secteurs: Schema.Attribute.JSON &
+      Schema.Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        [
+          'Automobile',
+          'BTP / N\u00E9goce',
+          'Banque / Assurance',
+          'Distribution alimentaire',
+          'Immobilier',
+          'Industries / Energies',
+          'Restauration',
+          'Retail',
+          'Sant\u00E9 / Beaut\u00E9',
+          'Tourisme / Loisirs',
+        ]
+      > &
+      Schema.Attribute.DefaultTo<'[]'>;
+  };
+}
+
+export interface FiltreFiltreressources extends Struct.ComponentSchema {
+  collectionName: 'components_filtre_filtreressources';
+  info: {
+    displayName: 'filtreautres';
+    icon: 'bulletList';
+  };
+  attributes: {
+    equipeconcernes: Schema.Attribute.JSON &
+      Schema.Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        [
+          'Direction',
+          'Marketing',
+          'Exp\u00E9rience client',
+          'IT / Digital',
+          'RH',
+          'R\u00E9seaux',
+          'Op\u00E9rations',
+          'Transverses',
+        ]
+      > &
+      Schema.Attribute.DefaultTo<'[]'>;
+    formats: Schema.Attribute.JSON &
+      Schema.Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        [
+          'Livre blanc',
+          '\u00C9tude',
+          'Replay',
+          'Infographie',
+          'Slides',
+          'Podcast',
+          'Guide',
+        ]
+      > &
+      Schema.Attribute.DefaultTo<'[]'>;
+    secteurs: Schema.Attribute.JSON &
+      Schema.Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        [
+          'Automobile',
+          'BTP / N\u00E9goce',
+          'Banque / Assurance',
+          'Distribution alimentaire',
+          'Immobilier',
+          'Industries / Energies',
+          'Restauration',
+          'Retail',
+          'Sant\u00E9 / Beaut\u00E9',
+          'Tourisme / Loisirs',
+        ]
+      > &
+      Schema.Attribute.DefaultTo<'[]'>;
   };
 }
 
@@ -596,7 +653,6 @@ export interface VideoVideoZone extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
-      'autresfiltres.autresfiltres': AutresfiltresAutresfiltres;
       'component-banner.banner-top': ComponentBannerBannerTop;
       'component-blog.blog': ComponentBlogBlog;
       'component-editorial.textand-image': ComponentEditorialTextandImage;
@@ -622,6 +678,8 @@ declare module '@strapi/strapi' {
       'component-video.video-zone': ComponentVideoVideoZone;
       'cross-sell.similar-article': CrossSellSimilarArticle;
       'filtre.filtre': FiltreFiltre;
+      'filtre.filtreautres2': FiltreFiltreautres2;
+      'filtre.filtreressources': FiltreFiltreressources;
       'menu.dropdown': MenuDropdown;
       'menu.link': MenuLink;
       'menu.menu-linlk': MenuMenuLinlk;

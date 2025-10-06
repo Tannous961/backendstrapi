@@ -1,14 +1,16 @@
 {
   "collectionName": "components_filtre_filtres",
   "info": {
-    "displayName": "filtre",
+    "displayName": "filtrecommun",
     "icon": "bulletList"
   },
   "options": {},
   "attributes": {
-    "fonctionnalite": {
-      "type": "enumeration",
-      "enum": [
+    "fonctionnalites": {
+      "type": "customField",
+      "customField": "plugin::multi-select.multi-select",
+      "default": "[]",
+      "options": [
         "Dataviz",
         "Avis en ligne",
         "Présence en ligne",
@@ -26,9 +28,11 @@
         "Questionnaire"
       ]
     },
-    "theme": {
-      "type": "enumeration",
-      "enum": [
+    "themes": {
+      "type": "customField",
+      "customField": "plugin::multi-select.multi-select",
+      "default": "[]",
+      "options": [
         "Animation réseaux",
         "Autocheck",
         "Feedback Management",

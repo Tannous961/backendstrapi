@@ -37,9 +37,9 @@
       "component": "filtre.filtre",
       "repeatable": false
     },
-    "autresfiltres": {
+    "filtreautres": {
       "type": "component",
-      "component": "autresfiltres.autresfiltres",
+      "component": "filtre.filtreressources",
       "repeatable": false
     }
   }

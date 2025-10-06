@@ -119,14 +119,14 @@
       "component": "filtre.filtre",
       "repeatable": false
     },
-    "autresfiltres": {
+    "filtreautres2": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "autresfiltres.autresfiltres",
+      "component": "filtre.filtreautres2",
       "repeatable": false
     }
   }

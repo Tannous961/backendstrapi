@@ -72,15 +72,15 @@
       "component": "filtre.filtre",
       "repeatable": false
     },
-    "autresfiltres": {
+    "filtresautres2": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "autresfiltres.autresfiltres",
-      "repeatable": false
+      "component": "filtre.filtreautres2",
+      "repeatable": true
     }
   }
 }

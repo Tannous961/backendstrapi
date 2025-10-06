@@ -1,14 +1,16 @@
 {
-  "collectionName": "components_autresfiltres_autresfiltres",
+  "collectionName": "components_filtre_filtreautres2s",
   "info": {
-    "displayName": "autresfiltres",
+    "displayName": "filtreautres2",
     "icon": "bulletList"
   },
   "options": {},
   "attributes": {
     "secteurs": {
-      "type": "enumeration",
-      "enum": [
+      "type": "customField",
+      "customField": "plugin::multi-select.multi-select",
+      "default": "[]",
+      "options": [
         "Automobile",
         "BTP / Négoce",
         "Banque / Assurance",
@@ -21,21 +23,11 @@
         "Tourisme / Loisirs"
       ]
     },
-    "format": {
-      "type": "enumeration",
-      "enum": [
-        "Livre blanc",
-        "Étude",
-        "Replay",
-        "Infographie",
-        "Slides",
-        "Podcast",
-        "Guide"
-      ]
-    },
-    "equipeconcerne": {
-      "type": "enumeration",
-      "enum": [
+    "equipeconcernes": {
+      "type": "customField",
+      "customField": "plugin::multi-select.multi-select",
+      "default": "[]",
+      "options": [
         "Direction",
         "Marketing",
         "Expérience client",

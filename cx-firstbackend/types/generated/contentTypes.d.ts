@@ -496,38 +496,6 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
   };
 }
 
-export interface ApiActivitySectorCategoryActivitySectorCategory
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'activity_sector_categories';
-  info: {
-    displayName: 'Activity Sector Category';
-    pluralName: 'activity-sector-categories';
-    singularName: 'activity-sector-category';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    filtre: Schema.Attribute.Enumeration<['type', 'autre', 'theme']>;
-    filtretest: Schema.Attribute.UID<'name'>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::activity-sector-category.activity-sector-category'
-    > &
-      Schema.Attribute.Private;
-    name: Schema.Attribute.String;
-    publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.UID;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiActivitySectorActivitySector
   extends Struct.CollectionTypeSchema {
   collectionName: 'activity_sectors';
@@ -545,15 +513,6 @@ export interface ApiActivitySectorActivitySector
     };
   };
   attributes: {
-    autresfiltres: Schema.Attribute.Component<
-      'autresfiltres.autresfiltres',
-      false
-    > &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     banner: Schema.Attribute.Component<'component-topbanner.banner', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -725,15 +684,6 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
         };
       }>;
     authors: Schema.Attribute.Relation<'oneToMany', 'api::author.author'>;
-    autresfiltres: Schema.Attribute.Component<
-      'autresfiltres.autresfiltres',
-      false
-    > &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     banner: Schema.Attribute.Component<'component-topbanner.banner', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -744,6 +694,12 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     filtre: Schema.Attribute.Component<'filtre.filtre', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    filtresautres2: Schema.Attribute.Component<'filtre.filtreautres2', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -771,56 +727,6 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
       }>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiArticlesCategoryArticlesCategory
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'articles_categories';
-  info: {
-    displayName: 'Articles Category';
-    pluralName: 'articles-categories';
-    singularName: 'articles-category';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
-  attributes: {
-    banner: Schema.Attribute.Component<'component-topbanner.banner', false> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::articles-category.articles-category'
-    >;
-    name: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.UID<'name'> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1536,50 +1442,6 @@ export interface ApiPopinPopin extends Struct.SingleTypeSchema {
   };
 }
 
-export interface ApiRessourceCategoryRessourceCategory
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'ressource_categories';
-  info: {
-    displayName: 'Ressource Category';
-    pluralName: 'ressource-categories';
-    singularName: 'ressource-category';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::ressource-category.ressource-category'
-    >;
-    name: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.UID<'name'> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiRessourceListRessourceList extends Struct.SingleTypeSchema {
   collectionName: 'ressource_lists';
   info: {
@@ -1650,15 +1512,12 @@ export interface ApiRessourceRessource extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    autresfiltres: Schema.Attribute.Component<
-      'autresfiltres.autresfiltres',
-      false
-    >;
     banner: Schema.Attribute.Component<'component-banner.banner-top', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     filtre: Schema.Attribute.Component<'filtre.filtre', false>;
+    filtreautres: Schema.Attribute.Component<'filtre.filtreressources', false>;
     form: Schema.Attribute.Component<'component-map.carte', false>;
     informationEditable: Schema.Attribute.Component<
       'component-editorial.textand-image',
@@ -1792,50 +1651,6 @@ export interface ApiSolutionSolution extends Struct.SingleTypeSchema {
   };
 }
 
-export interface ApiTestimonialCategoryTestimonialCategory
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'testimonial_categories';
-  info: {
-    displayName: 'Testimonial Category';
-    pluralName: 'testimonial-categories';
-    singularName: 'testimonial-category';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::testimonial-category.testimonial-category'
-    >;
-    name: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.UID<'name'> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiTestimonialTestimonial extends Struct.CollectionTypeSchema {
   collectionName: 'testimonials';
   info: {
@@ -1933,50 +1748,6 @@ export interface ApiTestimonialTestimonial extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiUsecaseCategoryUsecaseCategory
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'usecase_categories';
-  info: {
-    displayName: 'Usecase Category';
-    pluralName: 'usecase-categories';
-    singularName: 'usecase-category';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::usecase-category.usecase-category'
-    >;
-    name: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.UID<'name'> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiUsecaseListUsecaseList extends Struct.SingleTypeSchema {
   collectionName: 'usecase_lists';
   info: {
@@ -2044,15 +1815,6 @@ export interface ApiUsecaseUsecase extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    autresfiltres: Schema.Attribute.Component<
-      'autresfiltres.autresfiltres',
-      false
-    > &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     banner: Schema.Attribute.Component<'component-banner.banner-top', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -2072,6 +1834,12 @@ export interface ApiUsecaseUsecase extends Struct.CollectionTypeSchema {
         };
       }>;
     filtre: Schema.Attribute.Component<'filtre.filtre', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    filtreautres2: Schema.Attribute.Component<'filtre.filtreautres2', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -2651,11 +2419,9 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::about.about': ApiAboutAbout;
-      'api::activity-sector-category.activity-sector-category': ApiActivitySectorCategoryActivitySectorCategory;
       'api::activity-sector.activity-sector': ApiActivitySectorActivitySector;
       'api::activitysector-list.activitysector-list': ApiActivitysectorListActivitysectorList;
       'api::article.article': ApiArticleArticle;
-      'api::articles-category.articles-category': ApiArticlesCategoryArticlesCategory;
       'api::author.author': ApiAuthorAuthor;
       'api::blog-list.blog-list': ApiBlogListBlogList;
       'api::category.category': ApiCategoryCategory;
@@ -2669,14 +2435,11 @@ declare module '@strapi/strapi' {
       'api::main-menu.main-menu': ApiMainMenuMainMenu;
       'api::politic-page.politic-page': ApiPoliticPagePoliticPage;
       'api::popin.popin': ApiPopinPopin;
-      'api::ressource-category.ressource-category': ApiRessourceCategoryRessourceCategory;
       'api::ressource-list.ressource-list': ApiRessourceListRessourceList;
       'api::ressource.ressource': ApiRessourceRessource;
       'api::section.section': ApiSectionSection;
       'api::solution.solution': ApiSolutionSolution;
-      'api::testimonial-category.testimonial-category': ApiTestimonialCategoryTestimonialCategory;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
-      'api::usecase-category.usecase-category': ApiUsecaseCategoryUsecaseCategory;
       'api::usecase-list.usecase-list': ApiUsecaseListUsecaseList;
       'api::usecase.usecase': ApiUsecaseUsecase;
       'plugin::content-releases.release': PluginContentReleasesRelease;

@@ -108,16 +108,6 @@
       },
       "component": "filtre.filtre",
       "repeatable": false
-    },
-    "autresfiltres": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "autresfiltres.autresfiltres",
-      "repeatable": false
     }
   }
 }
