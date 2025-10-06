@@ -699,7 +699,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    filtresautres2: Schema.Attribute.Component<'filtre.filtreautres2', true> &
+    filtresautres2: Schema.Attribute.Component<'filtre.filtreautres2', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

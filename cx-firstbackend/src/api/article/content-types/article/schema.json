@@ -80,7 +80,7 @@
         }
       },
       "component": "filtre.filtreautres2",
-      "repeatable": true
+      "repeatable": false
     }
   }
 }
