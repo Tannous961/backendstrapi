@@ -108,16 +108,6 @@
           "localized": true
         }
       }
-    },
-    "testimonial_category": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::testimonial-category.testimonial-category"
-    },
-    "testimonial_sous_category": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::testimonial-category.testimonial-category"
     }
   }
 }

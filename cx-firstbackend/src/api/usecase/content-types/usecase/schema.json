@@ -109,20 +109,25 @@
         }
       }
     },
-    "filtre_usecase_type": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::usecase-category.usecase-category"
+    "filtre": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "filtre.filtre",
+      "repeatable": false
     },
-    "filtre_usecase_autres": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::usecase-category.usecase-category"
-    },
-    "filtre_usecase_theme": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::usecase-category.usecase-category"
+    "autresfiltres": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "autresfiltres.autresfiltres",
+      "repeatable": false
     }
   }
 }

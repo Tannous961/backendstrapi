@@ -1,0 +1,51 @@
+{
+  "collectionName": "components_autresfiltres_autresfiltres",
+  "info": {
+    "displayName": "autresfiltres",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "secteurs": {
+      "type": "enumeration",
+      "enum": [
+        "Automobile",
+        "BTP / Négoce",
+        "Banque / Assurance",
+        "Distribution alimentaire",
+        "Immobilier",
+        "Industries / Energies",
+        "Restauration",
+        "Retail",
+        "Santé / Beauté",
+        "Tourisme / Loisirs"
+      ]
+    },
+    "format": {
+      "type": "enumeration",
+      "enum": [
+        "Livre blanc",
+        "Étude",
+        "Replay",
+        "Infographie",
+        "Slides",
+        "Podcast",
+        "Guide"
+      ]
+    },
+    "equipeconcerne": {
+      "type": "enumeration",
+      "enum": [
+        "Direction",
+        "Marketing",
+        "Expérience client",
+        "IT / Digital",
+        "RH",
+        "Réseaux",
+        "Opérations",
+        "Transverses"
+      ]
+    }
+  },
+  "config": {}
+}

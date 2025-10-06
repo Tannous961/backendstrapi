@@ -511,6 +511,8 @@ export interface ApiActivitySectorCategoryActivitySectorCategory
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    filtre: Schema.Attribute.Enumeration<['type', 'autre', 'theme']>;
+    filtretest: Schema.Attribute.UID<'name'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -543,6 +545,15 @@ export interface ApiActivitySectorActivitySector
     };
   };
   attributes: {
+    autresfiltres: Schema.Attribute.Component<
+      'autresfiltres.autresfiltres',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     banner: Schema.Attribute.Component<'component-topbanner.banner', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -552,18 +563,12 @@ export interface ApiActivitySectorActivitySector
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    filtre_sector_autres: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::activity-sector-category.activity-sector-category'
-    >;
-    filtre_sector_theme: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::activity-sector-category.activity-sector-category'
-    >;
-    filtre_sector_type: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::activity-sector-category.activity-sector-category'
-    >;
+    filtre: Schema.Attribute.Component<'filtre.filtre', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     freetext: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -720,6 +725,15 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
         };
       }>;
     authors: Schema.Attribute.Relation<'oneToMany', 'api::author.author'>;
+    autresfiltres: Schema.Attribute.Component<
+      'autresfiltres.autresfiltres',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     banner: Schema.Attribute.Component<'component-topbanner.banner', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -729,18 +743,12 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    filtre_articles_autres: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::articles-category.articles-category'
-    >;
-    filtre_articles_theme: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::articles-category.articles-category'
-    >;
-    filtre_articles_type: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::articles-category.articles-category'
-    >;
+    filtre: Schema.Attribute.Component<'filtre.filtre', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     informationEditable: Schema.Attribute.Component<
       'component-editorial.textand-image',
       true
@@ -1642,22 +1650,15 @@ export interface ApiRessourceRessource extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    autresfiltres: Schema.Attribute.Component<
+      'autresfiltres.autresfiltres',
+      false
+    >;
     banner: Schema.Attribute.Component<'component-banner.banner-top', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    filtre_ressource_autres: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::ressource-category.ressource-category'
-    >;
-    filtre_ressource_theme: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::ressource-category.ressource-category'
-    >;
-    filtre_ressource_type: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::ressource-category.ressource-category'
-    >;
+    filtre: Schema.Attribute.Component<'filtre.filtre', false>;
     form: Schema.Attribute.Component<'component-map.carte', false>;
     informationEditable: Schema.Attribute.Component<
       'component-editorial.textand-image',
@@ -1914,14 +1915,6 @@ export interface ApiTestimonialTestimonial extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    testimonial_category: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::testimonial-category.testimonial-category'
-    >;
-    testimonial_sous_category: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::testimonial-category.testimonial-category'
-    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -2051,6 +2044,15 @@ export interface ApiUsecaseUsecase extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    autresfiltres: Schema.Attribute.Component<
+      'autresfiltres.autresfiltres',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     banner: Schema.Attribute.Component<'component-banner.banner-top', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -2069,18 +2071,12 @@ export interface ApiUsecaseUsecase extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    filtre_usecase_autres: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::usecase-category.usecase-category'
-    >;
-    filtre_usecase_theme: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::usecase-category.usecase-category'
-    >;
-    filtre_usecase_type: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::usecase-category.usecase-category'
-    >;
+    filtre: Schema.Attribute.Component<'filtre.filtre', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     freeText: Schema.Attribute.RichText &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

@@ -16,6 +16,18 @@
     },
     "slug": {
       "type": "uid"
+    },
+    "filtre": {
+      "type": "enumeration",
+      "enum": [
+        "type",
+        "autre",
+        "theme"
+      ]
+    },
+    "filtretest": {
+      "type": "uid",
+      "targetField": "name"
     }
   }
 }

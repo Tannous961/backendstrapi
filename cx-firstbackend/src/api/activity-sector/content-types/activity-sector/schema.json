@@ -99,20 +99,25 @@
         }
       }
     },
-    "filtre_sector_type": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::activity-sector-category.activity-sector-category"
+    "filtre": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "filtre.filtre",
+      "repeatable": false
     },
-    "filtre_sector_theme": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::activity-sector-category.activity-sector-category"
-    },
-    "filtre_sector_autres": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::activity-sector-category.activity-sector-category"
+    "autresfiltres": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "autresfiltres.autresfiltres",
+      "repeatable": false
     }
   }
 }

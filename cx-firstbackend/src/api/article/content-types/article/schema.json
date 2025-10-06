@@ -62,20 +62,25 @@
         }
       }
     },
-    "filtre_articles_theme": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::articles-category.articles-category"
+    "filtre": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "filtre.filtre",
+      "repeatable": false
     },
-    "filtre_articles_type": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::articles-category.articles-category"
-    },
-    "filtre_articles_autres": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::articles-category.articles-category"
+    "autresfiltres": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "autresfiltres.autresfiltres",
+      "repeatable": false
     }
   }
 }

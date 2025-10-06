@@ -32,20 +32,15 @@
     "name": {
       "type": "string"
     },
-    "filtre_ressource_type": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::ressource-category.ressource-category"
+    "filtre": {
+      "type": "component",
+      "component": "filtre.filtre",
+      "repeatable": false
     },
-    "filtre_ressource_theme": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::ressource-category.ressource-category"
-    },
-    "filtre_ressource_autres": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::ressource-category.ressource-category"
+    "autresfiltres": {
+      "type": "component",
+      "component": "autresfiltres.autresfiltres",
+      "repeatable": false
     }
   }
 }

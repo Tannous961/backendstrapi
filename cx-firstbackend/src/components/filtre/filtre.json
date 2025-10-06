@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_filtre_filtres",
+  "info": {
+    "displayName": "filtre",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "fonctionnalite": {
+      "type": "enumeration",
+      "enum": [
+        "Dataviz",
+        "Avis en ligne",
+        "Présence en ligne",
+        "Verbatims",
+        "Dashboard",
+        "Plans d'actions",
+        "Alertes",
+        "Collaboration",
+        "Interactions",
+        "Gestion des utilisateurs",
+        "Intégration & API",
+        "Accessibilité",
+        "Score",
+        "IA",
+        "Questionnaire"
+      ]
+    },
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "Animation réseaux",
+        "Autocheck",
+        "Feedback Management",
+        "Gestion e-réputation",
+        "VOC & enquêtes de sat",
+        "Enquêtes collaborateur",
+        "Labelliser son réseau",
+        "Analyse sémantique",
+        "Animation qualité",
+        "Enquêtes mystère",
+        "Expérience client",
+        "Satisfaction client"
+      ]
+    }
+  },
+  "config": {}
+}
