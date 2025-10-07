@@ -1685,6 +1685,18 @@ export interface ApiTestimonialTestimonial extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    filtre: Schema.Attribute.Component<'filtre.filtre', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    filtreautres: Schema.Attribute.Component<'filtre.filtreautres3', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     freeText: Schema.Attribute.RichText &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

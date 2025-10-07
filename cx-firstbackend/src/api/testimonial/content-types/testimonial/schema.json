@@ -108,6 +108,26 @@
           "localized": true
         }
       }
+    },
+    "filtre": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "filtre.filtre",
+      "repeatable": false
+    },
+    "filtreautres": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "filtre.filtreautres3",
+      "repeatable": false
     }
   }
 }

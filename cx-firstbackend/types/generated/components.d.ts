@@ -439,6 +439,33 @@ export interface FiltreFiltreautres2 extends Struct.ComponentSchema {
   };
 }
 
+export interface FiltreFiltreautres3 extends Struct.ComponentSchema {
+  collectionName: 'components_filtre_filtreautres3s';
+  info: {
+    displayName: 'filtreautres3';
+    icon: 'bulletList';
+  };
+  attributes: {
+    secteurs: Schema.Attribute.JSON &
+      Schema.Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        [
+          'Automobile',
+          'BTP / N\u00E9goce',
+          'Banque / Assurance',
+          'Distribution alimentaire',
+          'Immobilier',
+          'Industries / Energies',
+          'Restauration',
+          'Retail',
+          'Sant\u00E9 / Beaut\u00E9',
+          'Tourisme / Loisirs',
+        ]
+      > &
+      Schema.Attribute.DefaultTo<'[]'>;
+  };
+}
+
 export interface FiltreFiltreressources extends Struct.ComponentSchema {
   collectionName: 'components_filtre_filtreressources';
   info: {
@@ -679,6 +706,7 @@ declare module '@strapi/strapi' {
       'cross-sell.similar-article': CrossSellSimilarArticle;
       'filtre.filtre': FiltreFiltre;
       'filtre.filtreautres2': FiltreFiltreautres2;
+      'filtre.filtreautres3': FiltreFiltreautres3;
       'filtre.filtreressources': FiltreFiltreressources;
       'menu.dropdown': MenuDropdown;
       'menu.link': MenuLink;

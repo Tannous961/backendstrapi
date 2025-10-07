@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_filtre_filtreautres3s",
+  "info": {
+    "displayName": "filtreautres3",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "secteurs": {
+      "type": "customField",
+      "customField": "plugin::multi-select.multi-select",
+      "default": "[]",
+      "options": [
+        "Automobile",
+        "BTP / Négoce",
+        "Banque / Assurance",
+        "Distribution alimentaire",
+        "Immobilier",
+        "Industries / Energies",
+        "Restauration",
+        "Retail",
+        "Santé / Beauté",
+        "Tourisme / Loisirs"
+      ]
+    }
+  },
+  "config": {}
+}
