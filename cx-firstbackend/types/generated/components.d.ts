@@ -349,7 +349,7 @@ export interface CrossSellSimilarArticle extends Struct.ComponentSchema {
 export interface FiltreFiltre extends Struct.ComponentSchema {
   collectionName: 'components_filtre_filtres';
   info: {
-    displayName: 'filtrecommun';
+    displayName: 'filtrefonctionnalites';
     icon: 'bulletList';
   };
   attributes: {
@@ -375,32 +375,13 @@ export interface FiltreFiltre extends Struct.ComponentSchema {
         ]
       > &
       Schema.Attribute.DefaultTo<'[]'>;
-    themes: Schema.Attribute.JSON &
-      Schema.Attribute.CustomField<
-        'plugin::multi-select.multi-select',
-        [
-          'Animation r\u00E9seaux',
-          'Autocheck',
-          'Feedback Management',
-          'Gestion e-r\u00E9putation',
-          'VOC & enqu\u00EAtes de sat',
-          'Enqu\u00EAtes collaborateur',
-          'Labelliser son r\u00E9seau',
-          'Analyse s\u00E9mantique',
-          'Animation qualit\u00E9',
-          'Enqu\u00EAtes myst\u00E8re',
-          'Exp\u00E9rience client',
-          'Satisfaction client',
-        ]
-      > &
-      Schema.Attribute.DefaultTo<'[]'>;
   };
 }
 
 export interface FiltreFiltreautres2 extends Struct.ComponentSchema {
   collectionName: 'components_filtre_filtreautres2s';
   info: {
-    displayName: 'filtreautres2';
+    displayName: 'filtreequipeconcernes';
     icon: 'bulletList';
   };
   attributes: {
@@ -419,30 +400,13 @@ export interface FiltreFiltreautres2 extends Struct.ComponentSchema {
         ]
       > &
       Schema.Attribute.DefaultTo<'[]'>;
-    secteurs: Schema.Attribute.JSON &
-      Schema.Attribute.CustomField<
-        'plugin::multi-select.multi-select',
-        [
-          'Automobile',
-          'BTP / N\u00E9goce',
-          'Banque / Assurance',
-          'Distribution alimentaire',
-          'Immobilier',
-          'Industries / Energies',
-          'Restauration',
-          'Retail',
-          'Sant\u00E9 / Beaut\u00E9',
-          'Tourisme / Loisirs',
-        ]
-      > &
-      Schema.Attribute.DefaultTo<'[]'>;
   };
 }
 
 export interface FiltreFiltreautres3 extends Struct.ComponentSchema {
   collectionName: 'components_filtre_filtreautres3s';
   info: {
-    displayName: 'filtreautres3';
+    displayName: 'filtresecteurs';
     icon: 'bulletList';
   };
   attributes: {
@@ -469,25 +433,10 @@ export interface FiltreFiltreautres3 extends Struct.ComponentSchema {
 export interface FiltreFiltreressources extends Struct.ComponentSchema {
   collectionName: 'components_filtre_filtreressources';
   info: {
-    displayName: 'filtreautres';
+    displayName: 'filtreformats';
     icon: 'bulletList';
   };
   attributes: {
-    equipeconcernes: Schema.Attribute.JSON &
-      Schema.Attribute.CustomField<
-        'plugin::multi-select.multi-select',
-        [
-          'Direction',
-          'Marketing',
-          'Exp\u00E9rience client',
-          'IT / Digital',
-          'RH',
-          'R\u00E9seaux',
-          'Op\u00E9rations',
-          'Transverses',
-        ]
-      > &
-      Schema.Attribute.DefaultTo<'[]'>;
     formats: Schema.Attribute.JSON &
       Schema.Attribute.CustomField<
         'plugin::multi-select.multi-select',
@@ -502,20 +451,32 @@ export interface FiltreFiltreressources extends Struct.ComponentSchema {
         ]
       > &
       Schema.Attribute.DefaultTo<'[]'>;
-    secteurs: Schema.Attribute.JSON &
+  };
+}
+
+export interface FiltreFiltrethemes extends Struct.ComponentSchema {
+  collectionName: 'components_filtre_filtrethemes';
+  info: {
+    displayName: 'filtrethemes';
+    icon: 'bulletList';
+  };
+  attributes: {
+    themes: Schema.Attribute.JSON &
       Schema.Attribute.CustomField<
         'plugin::multi-select.multi-select',
         [
-          'Automobile',
-          'BTP / N\u00E9goce',
-          'Banque / Assurance',
-          'Distribution alimentaire',
-          'Immobilier',
-          'Industries / Energies',
-          'Restauration',
-          'Retail',
-          'Sant\u00E9 / Beaut\u00E9',
-          'Tourisme / Loisirs',
+          'Animation r\u00E9seaux',
+          'Autocheck',
+          'Feedback Management',
+          'Gestion e-r\u00E9putation',
+          'VOC & enqu\u00EAtes de sat',
+          'Enqu\u00EAtes collaborateur',
+          'Labelliser son r\u00E9seau',
+          'Analyse s\u00E9mantique',
+          'Animation qualit\u00E9',
+          'Enqu\u00EAtes myst\u00E8re',
+          'Exp\u00E9rience client',
+          'Satisfaction client',
         ]
       > &
       Schema.Attribute.DefaultTo<'[]'>;
@@ -708,6 +669,7 @@ declare module '@strapi/strapi' {
       'filtre.filtreautres2': FiltreFiltreautres2;
       'filtre.filtreautres3': FiltreFiltreautres3;
       'filtre.filtreressources': FiltreFiltreressources;
+      'filtre.filtrethemes': FiltreFiltrethemes;
       'menu.dropdown': MenuDropdown;
       'menu.link': MenuLink;
       'menu.menu-linlk': MenuMenuLinlk;

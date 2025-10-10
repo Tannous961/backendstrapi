@@ -32,14 +32,29 @@
     "name": {
       "type": "string"
     },
-    "filtre": {
+    "filtrefonctionnalites": {
       "type": "component",
       "component": "filtre.filtre",
       "repeatable": false
     },
-    "filtreautres": {
+    "filtreformats": {
       "type": "component",
       "component": "filtre.filtreressources",
+      "repeatable": false
+    },
+    "filtrethemes": {
+      "type": "component",
+      "component": "filtre.filtrethemes",
+      "repeatable": false
+    },
+    "filtresecteurs": {
+      "type": "component",
+      "component": "filtre.filtreautres3",
+      "repeatable": false
+    },
+    "filtreequipesconcernes": {
+      "type": "component",
+      "component": "filtre.filtreautres2",
       "repeatable": false
     }
   }

@@ -1,28 +1,11 @@
 {
   "collectionName": "components_filtre_filtreautres2s",
   "info": {
-    "displayName": "filtreautres2",
+    "displayName": "filtreequipeconcernes",
     "icon": "bulletList"
   },
   "options": {},
   "attributes": {
-    "secteurs": {
-      "type": "customField",
-      "customField": "plugin::multi-select.multi-select",
-      "default": "[]",
-      "options": [
-        "Automobile",
-        "BTP / Négoce",
-        "Banque / Assurance",
-        "Distribution alimentaire",
-        "Immobilier",
-        "Industries / Energies",
-        "Restauration",
-        "Retail",
-        "Santé / Beauté",
-        "Tourisme / Loisirs"
-      ]
-    },
     "equipeconcernes": {
       "type": "customField",
       "customField": "plugin::multi-select.multi-select",

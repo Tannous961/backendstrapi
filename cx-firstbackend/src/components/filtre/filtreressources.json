@@ -1,28 +1,11 @@
 {
   "collectionName": "components_filtre_filtreressources",
   "info": {
-    "displayName": "filtreautres",
+    "displayName": "filtreformats",
     "icon": "bulletList"
   },
   "options": {},
   "attributes": {
-    "secteurs": {
-      "type": "customField",
-      "customField": "plugin::multi-select.multi-select",
-      "default": "[]",
-      "options": [
-        "Automobile",
-        "BTP / Négoce",
-        "Banque / Assurance",
-        "Distribution alimentaire",
-        "Immobilier",
-        "Industries / Energies",
-        "Restauration",
-        "Retail",
-        "Santé / Beauté",
-        "Tourisme / Loisirs"
-      ]
-    },
     "formats": {
       "type": "customField",
       "customField": "plugin::multi-select.multi-select",
@@ -35,21 +18,6 @@
         "Slides",
         "Podcast",
         "Guide"
-      ]
-    },
-    "equipeconcernes": {
-      "type": "customField",
-      "customField": "plugin::multi-select.multi-select",
-      "default": "[]",
-      "options": [
-        "Direction",
-        "Marketing",
-        "Expérience client",
-        "IT / Digital",
-        "RH",
-        "Réseaux",
-        "Opérations",
-        "Transverses"
       ]
     }
   },

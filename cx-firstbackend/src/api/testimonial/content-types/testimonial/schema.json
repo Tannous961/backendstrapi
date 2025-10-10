@@ -109,7 +109,7 @@
         }
       }
     },
-    "filtre": {
+    "filtrefonctionnalites": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
@@ -119,7 +119,7 @@
       "component": "filtre.filtre",
       "repeatable": false
     },
-    "filtreautres": {
+    "filtresecteurs": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
@@ -127,6 +127,16 @@
         }
       },
       "component": "filtre.filtreautres3",
+      "repeatable": false
+    },
+    "filtrethemes": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "filtre.filtrethemes",
       "repeatable": false
     }
   }

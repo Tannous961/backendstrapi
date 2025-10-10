@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_filtre_filtrethemes",
+  "info": {
+    "displayName": "filtrethemes",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "themes": {
+      "type": "customField",
+      "customField": "plugin::multi-select.multi-select",
+      "default": "[]",
+      "options": [
+        "Animation réseaux",
+        "Autocheck",
+        "Feedback Management",
+        "Gestion e-réputation",
+        "VOC & enquêtes de sat",
+        "Enquêtes collaborateur",
+        "Labelliser son réseau",
+        "Analyse sémantique",
+        "Animation qualité",
+        "Enquêtes mystère",
+        "Expérience client",
+        "Satisfaction client"
+      ]
+    }
+  },
+  "config": {}
+}

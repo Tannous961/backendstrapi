@@ -522,7 +522,13 @@ export interface ApiActivitySectorActivitySector
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    filtre: Schema.Attribute.Component<'filtre.filtre', false> &
+    filtrefonctionnalites: Schema.Attribute.Component<'filtre.filtre', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    filtrethemes: Schema.Attribute.Component<'filtre.filtrethemes', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -693,13 +699,28 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    filtre: Schema.Attribute.Component<'filtre.filtre', false> &
+    filtreequipeconcernes: Schema.Attribute.Component<
+      'filtre.filtreautres2',
+      false
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    filtresautres2: Schema.Attribute.Component<'filtre.filtreautres2', false> &
+    filtrefonctionnalites: Schema.Attribute.Component<'filtre.filtre', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    filtresecteurs: Schema.Attribute.Component<'filtre.filtreautres3', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    filtrethemes: Schema.Attribute.Component<'filtre.filtrethemes', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1516,8 +1537,14 @@ export interface ApiRessourceRessource extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    filtre: Schema.Attribute.Component<'filtre.filtre', false>;
-    filtreautres: Schema.Attribute.Component<'filtre.filtreressources', false>;
+    filtreequipesconcernes: Schema.Attribute.Component<
+      'filtre.filtreautres2',
+      false
+    >;
+    filtrefonctionnalites: Schema.Attribute.Component<'filtre.filtre', false>;
+    filtreformats: Schema.Attribute.Component<'filtre.filtreressources', false>;
+    filtresecteurs: Schema.Attribute.Component<'filtre.filtreautres3', false>;
+    filtrethemes: Schema.Attribute.Component<'filtre.filtrethemes', false>;
     form: Schema.Attribute.Component<'component-map.carte', false>;
     informationEditable: Schema.Attribute.Component<
       'component-editorial.textand-image',
@@ -1685,13 +1712,19 @@ export interface ApiTestimonialTestimonial extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    filtre: Schema.Attribute.Component<'filtre.filtre', false> &
+    filtrefonctionnalites: Schema.Attribute.Component<'filtre.filtre', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    filtreautres: Schema.Attribute.Component<'filtre.filtreautres3', false> &
+    filtresecteurs: Schema.Attribute.Component<'filtre.filtreautres3', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    filtrethemes: Schema.Attribute.Component<'filtre.filtrethemes', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1845,13 +1878,28 @@ export interface ApiUsecaseUsecase extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    filtre: Schema.Attribute.Component<'filtre.filtre', false> &
+    filtreequipeconcernes: Schema.Attribute.Component<
+      'filtre.filtreautres2',
+      false
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    filtreautres2: Schema.Attribute.Component<'filtre.filtreautres2', false> &
+    filtrefonctionnalites: Schema.Attribute.Component<'filtre.filtre', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    filtresecteurs: Schema.Attribute.Component<'filtre.filtreautres3', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    filtrethemes: Schema.Attribute.Component<'filtre.filtrethemes', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

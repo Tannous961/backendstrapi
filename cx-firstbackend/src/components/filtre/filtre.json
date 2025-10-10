@@ -1,7 +1,7 @@
 {
   "collectionName": "components_filtre_filtres",
   "info": {
-    "displayName": "filtrecommun",
+    "displayName": "filtrefonctionnalites",
     "icon": "bulletList"
   },
   "options": {},
@@ -26,25 +26,6 @@
         "Score",
         "IA",
         "Questionnaire"
-      ]
-    },
-    "themes": {
-      "type": "customField",
-      "customField": "plugin::multi-select.multi-select",
-      "default": "[]",
-      "options": [
-        "Animation réseaux",
-        "Autocheck",
-        "Feedback Management",
-        "Gestion e-réputation",
-        "VOC & enquêtes de sat",
-        "Enquêtes collaborateur",
-        "Labelliser son réseau",
-        "Analyse sémantique",
-        "Animation qualité",
-        "Enquêtes mystère",
-        "Expérience client",
-        "Satisfaction client"
       ]
     }
   },
