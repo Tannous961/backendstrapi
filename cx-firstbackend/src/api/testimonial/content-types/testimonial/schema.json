@@ -138,6 +138,16 @@
       },
       "component": "filtre.filtrethemes",
       "repeatable": false
+    },
+    "tag": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "tag.tag",
+      "repeatable": true
     }
   }
 }

@@ -579,6 +579,12 @@ export interface ApiActivitySectorActivitySector
           localized: true;
         };
       }>;
+    tag: Schema.Attribute.Component<'tag.tag', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -748,6 +754,12 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
       }>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID;
+    tag: Schema.Attribute.Component<'tag.tag', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1273,6 +1285,12 @@ export interface ApiLandingpageLandingpage extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    slug: Schema.Attribute.UID<'name'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1559,6 +1577,7 @@ export interface ApiRessourceRessource extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID;
+    tag: Schema.Attribute.Component<'tag.tag', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1775,6 +1794,12 @@ export interface ApiTestimonialTestimonial extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    tag: Schema.Attribute.Component<'tag.tag', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1945,6 +1970,12 @@ export interface ApiUsecaseUsecase extends Struct.CollectionTypeSchema {
         };
       }>;
     slug: Schema.Attribute.UID &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    tag: Schema.Attribute.Component<'tag.tag', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
